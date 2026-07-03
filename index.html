@@ -213,23 +213,44 @@
         <a class="nav-item" data-view="search">
           <span>Create a Search campaign</span><span class="tag">Guide</span>
         </a>
+        <a class="nav-item" data-view="edit-search">
+          <span>Edit a Search campaign</span><span class="tag">Guide</span>
+        </a>
         <a class="nav-item" data-view="smart-shopping">
           <span>Create a Smart Shopping campaign</span><span class="tag">Guide</span>
         </a>
         <a class="nav-item" data-view="edit-smart-shopping">
           <span>Edit a Smart Shopping campaign</span><span class="tag">Guide</span>
         </a>
+        <a class="nav-item" data-view="simulation">
+          <span>Use Campaign Simulation</span><span class="tag">Guide</span>
+        </a>
       </div>
 
       <div class="nav-group">
         <div class="nav-eyebrow">Product Display Ads</div>
         <a class="nav-item" data-view="pda">
-          <span>Create a PDA campaign</span><span class="tag soon">Soon</span>
+          <span>Create a PDA campaign</span><span class="tag">Guide</span>
         </a>
       </div>
 
       <div class="nav-group">
         <div class="nav-eyebrow">Wallet</div>
+        <a class="nav-item" data-view="credit-request-payu">
+          <span>Raise a credit request (PayU)</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="credit-request-bank">
+          <span>Raise a credit request (Bank transfer)</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="credit-request-po">
+          <span>Raise a credit request (Purchase Order)</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="credit-request-ro">
+          <span>Raise a credit request (Recharge Order)</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="credit-request-mv">
+          <span>Raise a credit request (Marketing Visibility)</span><span class="tag">Guide</span>
+        </a>
         <a class="nav-item" data-view="wallet">
           <span>Manage your wallet</span><span class="tag soon">Soon</span>
         </a>
@@ -279,6 +300,11 @@
             <div class="kc-desc">Set up, configure, and launch a keyword-targeted Search campaign end to end.</div>
             <div class="kc-meta">Guide available</div>
           </a>
+          <a class="kc-card" data-view="edit-search">
+            <div class="kc-title">Edit a Search campaign</div>
+            <div class="kc-desc">Update the daily budget on an existing Search campaign and save your changes.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
           <a class="kc-card" data-view="smart-shopping">
             <div class="kc-title">Create a Smart Shopping campaign</div>
             <div class="kc-desc">Launch an automated Smart Shopping campaign across performance inventory.</div>
@@ -289,10 +315,40 @@
             <div class="kc-desc">Update budget, end date, and category bids on an existing campaign, then save.</div>
             <div class="kc-meta">Guide available</div>
           </a>
+          <a class="kc-card" data-view="simulation">
+            <div class="kc-title">Use Campaign Simulation</div>
+            <div class="kc-desc">Preview performance estimates for a Smart Shopping campaign while setting bids and budget.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
           <a class="kc-card" data-view="pda">
             <div class="kc-title">Create a PDA campaign</div>
             <div class="kc-desc">Run Product Display Ads with category targeting and product sets.</div>
-            <div class="kc-meta soon">Coming soon</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="credit-request-payu">
+            <div class="kc-title">Raise a credit request (PayU)</div>
+            <div class="kc-desc">Top up your wallet through the PayU gateway and submit a credit request.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="credit-request-bank">
+            <div class="kc-title">Raise a credit request (Bank transfer)</div>
+            <div class="kc-desc">Top up via NEFT / RTGS / bank transfer by submitting your UTR and payment proof.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="credit-request-po">
+            <div class="kc-title">Raise a credit request (Purchase Order)</div>
+            <div class="kc-desc">Recharge against a purchase order by submitting your PO/RO number, issue date, and document.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="credit-request-ro">
+            <div class="kc-title">Raise a credit request (Recharge Order)</div>
+            <div class="kc-desc">Recharge against a recharge order by submitting your PO/RO number, issue date, and signed document.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="credit-request-mv">
+            <div class="kc-title">Raise a credit request (Marketing Visibility)</div>
+            <div class="kc-desc">Submit a marketing visibility credit using your contract reference, PI number, and proforma invoice.</div>
+            <div class="kc-meta">Guide available</div>
           </a>
           <a class="kc-card" data-view="wallet">
             <div class="kc-title">Manage your wallet</div>
@@ -818,6 +874,640 @@
         </div>
       </section>
 
+      <!-- ---------- EDIT SEARCH CAMPAIGN GUIDE ---------- -->
+      <section class="view" id="view-edit-search">
+        <div class="eyebrow">Performance</div>
+        <h1 class="page-title">Edit and save a Search campaign</h1>
+        <p class="lede">
+          Modify an existing Search campaign and save your changes. This walkthrough shows a daily budget
+          update, then steps through the edit wizard to save.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Campaign navigation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Search Campaigns</b> in the Purplle Ads sidebar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/107d5994-308c-476c-9166-2e6546bf6b03/sps-redacted-ec073f7fc4eb4b96a46dcfb9fe1ac681_c495dcf1bd85443c8bb11ee9458b5cb9_text_export.jpeg" alt="Search Campaigns in sidebar"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d4756786-5efb-49e9-a94d-4be70f8bdedd/sps-redacted-a2a23d2c64df4bc281c7830479ad3dc6_094203669e3a4ecb90117b6cd571102b_text_export.jpeg" alt="Search Campaigns list"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Update the budget</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Open the actions menu for the campaign and select <b>Edit</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/adb08a1a-ef99-4b91-b605-08c57f0e391b/sps-redacted-0b219f8256ba41e88c2cfdfc46d195e6_17daca1d8cf14a82b9acc4ed7406ec83_text_export.jpeg" alt="Open actions menu"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f317be70-cf55-4372-b9af-6d6b869a2c49/sps-redacted-52d0496d4a9a4b04ac6b6b3726ad2f8a_07302421f0744cb6814a02192609962c_text_export.jpeg" alt="Select Edit"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Update the <b>Daily Budget (INR)</b> field with the amount you want.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/37a3dca6-70be-4a28-a756-f9966fe88ded/sps-redacted-287b81816eef435d917cff13bd5a9312_ba6597d26315415291b55c4e5e89bab8_text_export.jpeg" alt="Update daily budget"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to advance to Product Selection.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d3669324-47a2-4c2f-90af-8bb618887743/sps-redacted-89a0af3ee44541a18d93285337aea1f0_091b48a3f7b54e819de108410560dd70_text_export.jpeg" alt="Next to Product Selection"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to advance to Keywords &amp; Bidding.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e6bb4dac-958f-4872-94d8-0bc680c28e2b/sps-redacted-dcfbdbae3ff24f258c49135632b869dd_8b5b1ab942e0416f8c29c2975585e6de_text_export.jpeg" alt="Next to Keywords and Bidding"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to view the Review &amp; Save summary.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/cd68e71b-9766-466d-bce5-83d51eb0a670/sps-redacted-799bea7865e44f849cf1770da6ba3c2b_d2623094f1914eba9562332941f28ad9_text_export.jpeg" alt="Next to Review and Save"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Save your changes</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Click <b>Save Campaign</b> to finalize your changes.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/06eae04c-ab5c-4145-bfec-e5aa08d0ce36/sps-redacted-d566315083404a438e968e7589cddbe4_45a64b05c5e6453489af19e1cf3624e9_text_export.jpeg" alt="Save Campaign"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- CAMPAIGN SIMULATION GUIDE ---------- -->
+      <section class="view" id="view-simulation">
+        <div class="eyebrow">Performance</div>
+        <h1 class="page-title">Use Campaign Simulation for Smart Shopping</h1>
+        <p class="lede">
+          The Campaign Simulation panel lets you preview performance estimates as you set up a
+          Smart Shopping campaign — so you can see how bids and budget affect projected results before you launch.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Campaign navigation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> in the sidebar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ab719bc3-263e-4478-bbeb-98274fb170ac/sps-redacted-9f939a774f9541faa2f8050eed81bdc4_bab3f1a69d2c4035a08a9c65c2c02938_text_export.jpeg" alt="Purplle Ads in sidebar"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>Smart Shopping</b> under the Performance section.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/30dd3287-a7d7-469a-a450-ca22674fdc81/sps-redacted-c6cfbd65fdb24739b44052d846c71789_7b1c8debcc2b4d338d6c2420b568151f_text_export.jpeg" alt="Smart Shopping under Performance"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Create New Campaign</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f15f1147-c9a2-4c17-8c5e-f20db2332e10/sps-redacted-ed82b82cd26f4fccb2ec1e4c695ede51_86b49b678d264860ba01a0fa0bdb48db_text_export.jpeg" alt="Create New Campaign"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Campaign setup</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Open the <b>Campaign Simulation</b> panel and review the performance estimates.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8d8f8866-db7f-42ca-a649-ea3e63afc0da/sps-redacted-c410f7b912a749e39ef9362a0dcafd70_2db7367addf34ec394e539c7ff84f088_text_export.jpeg" alt="Open Campaign Simulation panel"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a5b9c7cb-0bc8-4a4b-9a42-e1ea7065c605/sps-redacted-52d29a3d998844a78307bc4e376a252f_8e5858bc44c84b1caccf5d0b5b662fc6_text_export.jpeg" alt="Simulation estimates"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/bcd0e2aa-def6-4baf-8009-355a86393b20/sps-redacted-403acb07964e4c028785046edf5ab213_369be61bab4d4824b96d2de79bba8c33_text_export.jpeg" alt="Simulation estimates"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Enter the campaign name and daily budget.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b1128e13-6754-432f-914a-6b2995b3147f/sps-redacted-85b968b8dd6c46e89eac02a1e6b8468f_b93f226a099f4978ac02b0666938fa0c_text_export.jpeg" alt="Enter name and budget"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c11ab5c3-071f-4335-8ebc-2e3ebd9a6838/sps-redacted-6a0bcf68e8ff4f6489711d83eedb74bc_5feec489f11e41a79a9f51845bc10cf5_text_export.jpeg" alt="Name and budget entered"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to proceed to product selection.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/451d5297-9b77-4a45-9c53-553521f53ebb/sps-redacted-b8770d1eb41547208e148aad3e8a1c14_a5a36745379849d487326072d1e40457_text_export.jpeg" alt="Next to product selection"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Product selection</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Filter products by category (for example, <b>Skincare &gt; Moisturizer &gt; Serum &amp; Essence</b>).</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/4389dd29-5d1b-4618-a6e1-66aee7d1ec11/sps-redacted-5b6aec364da4490082d77e8420c1cdd3_a1b38d5107ae444ea9fc9f968f3b5607_text_export.jpeg" alt="Filter by category"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/26a499a9-be0a-4e8e-9f81-36c255dce967/sps-redacted-9024fd41de204c72b8e843666a1a580f_911b0cb4238c4b7d9b405849872c5f0e_text_export.jpeg" alt="Category filter options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/98ce16db-c6f0-4579-aadd-848a96b79abc/sps-redacted-8058469b7a5940a6acea8f191d7e5063_35eee892ee094309826968c37761bba2_text_export.jpeg" alt="Category selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Click <b>Apply Filters</b> to update the product list.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1dbed60c-ed52-4ae6-a67b-301f25275300/sps-redacted-ef58e0e0641340ba8f31074d9acb0d71_a50a64bbb8a44b74896ddf8d34bbfd11_text_export.jpeg" alt="Apply Filters"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Select the products you want to include in the campaign.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8c54e86c-4e31-48ec-80d5-2a202c3689b3/sps-redacted-d3b85dc766554f979e81563f3e51fe44_119490bb6da6480682d7b45a6739efe8_text_export.jpeg" alt="Select products"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/03ed02da-a018-4755-af4f-a25be80176af/sps-redacted-48c60d69871849ccb478078c0b0d644b_935713bfd25c4008a42733a307ea21ca_text_export.jpeg" alt="Products selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to proceed to bidding.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8059534f-7abf-41fb-9017-a2cbb090b3d1/sps-redacted-8fc40e23130b48779d61c0dc222d2620_268db567b6a541feaf2489f48bdf3851_text_export.jpeg" alt="Next to bidding"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Bidding and finalization</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">11</div><div class="step-body">
+            <div class="step-text">Adjust your category bid amounts and watch the estimates update in the simulation tool.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1eee85e9-4ea9-4f54-8ec0-abf4e0568256/sps-redacted-be9c81d3c99d4cf59431c99a60cfb95a_e3db014555e74a77a131ca0ddd2364f9_text_export.jpeg" alt="Adjust category bids"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/9d109322-2dbe-49b6-aef5-325476049a95/sps-redacted-45bd89beca824be1af4e1475c58dbf2d_9197bfe3b64b46ba8f63dad4434e1bdf_text_export.jpeg" alt="Simulation estimate updating"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6ed52eed-3fb9-4942-a44e-ee583b3e469e/sps-redacted-a794f3d1d3b34eadb35d522bb5db2357_72a072c5097c49e0b07ef660415600dc_text_export.jpeg" alt="Simulation estimate updating"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/85caad7e-5073-4b62-a10a-c08100278810/sps-redacted-cfda1454c2f342539cbca3d3bc0598b7_44873f91e04b4c2095f4a534d262aca9_text_export.jpeg" alt="Simulation estimate updating"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/43d41f31-bee7-43ee-a82c-b32f93fc6f34/sps-redacted-8a8b68b9232041b986ff88f1a86ab822_4e1ba2d56552469d9b4b95c50dca4536_text_export.jpeg" alt="Simulation estimate updating"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/452307d6-5b94-4f03-bd6d-f6c3a11fdf15/sps-redacted-e1046be2d41a4d5c843d7e445aa92665_a3c2294563224a368921fd26591b6520_text_export.jpeg" alt="Bids adjusted"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">12</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to move to the review stage.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/818441b1-c7eb-4c7e-b992-b85a1c99864f/sps-redacted-b344d50e8d394b0aa54360b47636e922_fde65fe8cf3c41769a770ff7bed57d6f_text_export.jpeg" alt="Next to review"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">13</div><div class="step-body">
+            <div class="step-text">Close the Campaign Simulation panel.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/376ae004-e5e6-4922-ac6f-571e70b9e882/sps-redacted-f186bde080674c2ebca999aa2068e10d_9fb51a4a187f4d72870599a3c470b3cd_text_export.jpeg" alt="Close simulation panel"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">14</div><div class="step-body">
+            <div class="step-text">Click <b>Save &amp; Launch</b> to finalize and start the campaign.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c81cd494-bf67-42d5-a9e8-7056cb496ea7/sps-redacted-a506b1d36c8242f6aa55d0c0c1ebdeed_cd4443dfd4ee4aa19aa81be38ebb33b8_text_export.jpeg" alt="Save and Launch"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>Simulation estimates are projections.</b> The Campaign Simulation panel helps you compare how different bids and budgets could perform. Treat the figures as directional estimates to guide setup, not guaranteed results.
+        </div>
+      </section>
+
+      <!-- ---------- RAISE A CREDIT REQUEST (PAYU) GUIDE ---------- -->
+      <section class="view" id="view-credit-request-payu">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Raise a credit request with PayU</h1>
+        <p class="lede">
+          Top up your wallet through the PayU gateway. This walkthrough covers selecting PayU as your
+          payment method and entering your amount, through to the review stage.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Manage</b> in the top navigation bar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/524fb9b2-35d4-4201-8601-514b917d22e9/sps-redacted-333176e19dc64cd08ca90cb2bc7e28af_00a0fe1dea604dfda5af1f7754d1b645_text_export.jpeg" alt="Manage in top navigation"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>Raise Credit Request</b> from the dropdown menu.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1c65866f-5c47-483f-82ed-f883c9982485/sps-redacted-b0393bd1bc2341f4aee4e8ae5e75197d_d83b1091ae354082b9d0cf6c939a0773_text_export.jpeg" alt="Raise Credit Request"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Select <b>PayU (gateway, auto-confirm ≤ ₹4.5L)</b> from the Payment Method dropdown.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6e8ce772-4e1f-48b8-9d7e-60c6573d6f40/sps-redacted-c2442aeac17f44519c10ec3259d9c4d2_d21619fffeb24da3bff253efd33a5287_text_export.jpeg" alt="Select PayU payment method"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/dc60f92b-59c9-4c4e-8764-0992b1f2c9a2/sps-redacted-bf334fd4f32e41c7b73cfcc7690afe8c_090034dd8bcf46acbcef013fe3c984d4_text_export.jpeg" alt="PayU selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Enter a net amount of up to <b>₹4,50,000</b> and click <b>Next → Step 2</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8c3e3712-d9d9-45d6-adb0-07e821539142/sps-redacted-0877c45c13cb4434ac711da90baefb62_25bc060257474115a7d0e66ac6fd373b_text_export.jpeg" alt="Enter net amount"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/482bd2bc-cfc3-4476-a36e-3c4732fc2c4f/sps-redacted-6c074fe494e243ceb17b13c2c2d97332_e0170f5eed3e4b629e828a359cb65062_text_export.jpeg" alt="Amount entry"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1920245a-a98a-4cf6-9f08-25440e1631bc/sps-redacted-14cf46c7d0c740959255d7e0a757cc16_63f16710a33748c79e85866925239d16_text_export.jpeg" alt="Amount entry"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b37d79e2-fd14-48f2-ad9e-39d6c7bbfb92/sps-redacted-d884f268ce944e2bac94d61f83ddb63c_6c37ab57216f4813977fab2682d30cd3_text_export.jpeg" alt="Amount entry"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/33671c8f-53c7-49bf-8d0d-91621d42c420/sps-redacted-a892ff3b53154888a5f899f6cfc04633_7103e76653144eb3979b50d05695de24_text_export.jpeg" alt="Proceed to Step 2"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Next → Step 3</b> to proceed to the review stage.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/7160d4cb-a80a-4bd8-965e-7f73841f2dbb/sps-redacted-3d9f0fbe797547d6a766d0c53e6a7c6e_5a92a03c17cf49e89b9b238b55e04d02_text_export.jpeg" alt="Proceed to review stage"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>PayU credit requests up to ₹4,50,000 are auto-confirmed.</b> Amounts within this limit are confirmed automatically through the gateway.
+        </div>
+      </section>
+
+      <!-- ---------- RAISE A CREDIT REQUEST (BANK TRANSFER) GUIDE ---------- -->
+      <section class="view" id="view-credit-request-bank">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Raise a credit request with a bank transfer</h1>
+        <p class="lede">
+          Top up your wallet using NEFT, RTGS, or a bank transfer. This walkthrough covers selecting the
+          wallet and payment method, entering your amount, and submitting your UTR and payment proof.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Request initiation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Manage</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1db27367-3540-41d1-9299-1d8d98fa6615/sps-redacted-1cc009b069a7418d8c8b79bf93566c3a_472916e0ed3e4b17beb492a63826ca87_text_export.jpeg" alt="Manage"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Raise Credit Request</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8a5ebbe7-1d09-407d-a52f-e49841291d49/sps-redacted-bea13fd94f2f4125bf7d2b83857bcb77_74871994100547ef916af4758ab06bc0_text_export.jpeg" alt="Raise Credit Request"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Transaction setup</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Select <b>Primary</b> from the Active Wallets list.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ddda6964-2da1-4b23-a6f7-c34c77e89978/sps-redacted-d726584df6e14cbaacba6d9d1447ebd2_f7fcbec4caa14738add13769de3d9f9b_text_export.jpeg" alt="Select Primary wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Select <b>Primary</b> from the <b>Credit To Wallet</b> dropdown.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e0ee9d00-9ecc-44b2-afae-3d8258b1b845/sps-redacted-5644f2c041d74eda9a016cf28fbc267b_3c3794d7aceb449ea13da32827239fcd_text_export.jpeg" alt="Credit To Wallet dropdown"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/55290579-bd5c-4c78-a51d-52e393835e96/sps-redacted-b67d7baf2d614a9a8cbf6b9e50a4629c_300e4f5054ba43378bc1d306215b6686_text_export.jpeg" alt="Wallet selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Select <b>NEFT / RTGS / Bank Transfer</b> as the payment method.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ff4bfd2d-449e-46af-a68e-223e9d80c408/sps-redacted-9ca05d36d97142428c52b1b4871000d0_796bcbb92d2848dc947eeafd007fbf40_text_export.jpeg" alt="Select bank transfer method"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/68583ccb-de34-4ba4-b2cb-881df720dfde/sps-redacted-af2e54eff26f48bdae02a37165c9036c_f75e0a719e1445b584bf8c6f69563dd7_text_export.jpeg" alt="Bank transfer selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Enter your net amount (here, ₹2,50,000).</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2315ae29-69f8-44be-92f4-df5c4d4c84be/sps-redacted-3c4a44064b444b50957f7c05dbd7ac8d_9eaeb6ef319b4a4d8b79f4c7605ed976_text_export.jpeg" alt="Enter net amount"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/51c4e958-6fc6-4837-aab6-1719f9f0c47f/sps-redacted-40f60735d59643f884c9632d37a2e856_2d2a63d787c04a67a662d4bca3b5df1f_text_export.jpeg" alt="Amount entered"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Click <b>Next → Step 2</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/070ff5c9-378e-4b68-861a-7e5129823f08/sps-redacted-5bed0c98f8df484e93fe7fa88b2e2e7c_bbc2c273580a4104ae7531ea2f31420d_text_export.jpeg" alt="Next to Step 2"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Payment proof</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Enter your UTR number and upload your payment proof.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ad7e28d2-15fa-411d-9078-2de7a493e141/sps-redacted-99219196a25f4d529c51ef2b7c61a18a_af9d1a18f0b542a592bb28feb4d0e73f_text_export.jpeg" alt="Enter UTR and upload proof"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8c9b6100-0eba-4016-80ff-5711d0450d43/sps-redacted-8f84ba1248524d67883e0905e192a4a2_59bf402608e147538858ef59245f2c2a_text_export.jpeg" alt="UTR and proof entered"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Click <b>Next → Step 3</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3fa79249-fb3a-4d15-b1ef-ddbdcfa3e3bc/sps-redacted-dec11b79a05f4ed1b1ee6f56b6b96769_1e532e692d764c1e9d72886b59f4d84b_text_export.jpeg" alt="Next to Step 3"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Click <b>Submit Recharge Request</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/059580ce-d88a-4d6e-bb17-23a94ba58b94/sps-redacted-f760838df15b4fae8ca9a0207b1959b6_62b28a0fb6fd46c8956e710b085cc14f_text_export.jpeg" alt="Submit Recharge Request"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>Bank transfer credits are reviewed before they're applied.</b> Unlike PayU, a NEFT / RTGS / bank transfer request is confirmed after your UTR and payment proof are verified — it isn't credited instantly.
+        </div>
+      </section>
+
+      <!-- ---------- RAISE A CREDIT REQUEST (PURCHASE ORDER) GUIDE ---------- -->
+      <section class="view" id="view-credit-request-po">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Raise a credit request with a Purchase Order</h1>
+        <p class="lede">
+          Recharge your wallet against a purchase order using the PO (Post-Paid) method. This walkthrough
+          covers entering your PO details, uploading the document, and submitting your request.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Initiating the credit request</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Manage</b> and select <b>Raise Credit Request</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3ed777a8-18a9-4ec7-a906-98729066181c/sps-redacted-441e30107a2441ecbbc8e86de46a9f6d_3841216913874b769c57b2a66e703c4b_text_export.jpeg" alt="Manage and Raise Credit Request"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/bbb70f01-1532-4612-a7f1-68b905d1ff5f/sps-redacted-ce613dd0bc424119bcb60595d9064636_f96c9f61acf34758a976b97d5c317e5f_text_export.jpeg" alt="Raise Credit Request"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Credit detail entry</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>PO (Post-Paid)</b> as the Payment Method.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/61d55781-3e2f-460f-a836-7c07c39f634c/sps-redacted-7acb46987d0d466180478fa157f29e37_d4be8e7895b94bda88369619a5238428_text_export.jpeg" alt="Select PO Post-Paid"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8013c766-08a4-451c-8b2a-d86b89e0d402/sps-redacted-22e1ec9a8147432e89c23ccda8d3da50_e2d45429c0ab48cbb0ff3174f90f143b_text_export.jpeg" alt="PO Post-Paid selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Enter the net amount and click <b>Next</b> to continue.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d1426603-2203-4ca7-ac2f-984d505c1c7b/sps-redacted-aa3d3bdc59624010b16932d4279205b7_a90343e9d2164c1a93bc8c7562a55758_text_export.jpeg" alt="Enter net amount"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c2748340-57dd-4e4b-97e2-e00537721679/sps-redacted-eaca1b1358574056be39cc41af4839e1_b7206a9b79464a01a1e6c416684138db_text_export.jpeg" alt="Amount entered"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Documentation and upload</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Enter the <b>PO/RO Number</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/89d9c50f-6147-40fd-bc51-42f3fc8447c0/sps-redacted-f717290342d641519044dcc7fd090946_4c62e896b6d64f1e84be5975407de3d1_text_export.jpeg" alt="Enter PO/RO number"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Select the Issue Date from the calendar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/0503c707-5155-4a4c-91cb-d6aad08c7338/sps-redacted-623d93688f774973820ba0002a2d2119_2b11e1a7df6445a6afdf078a4c5b05c5_text_export.jpeg" alt="Select issue date"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1d29c75c-cca8-4940-be2d-b74e8ae0d5f2/sps-redacted-a139a614349a423d8fb1159064264077_09a89f052d2a4380bc06b70623a0d0c9_text_export.jpeg" alt="Issue date selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Upload the PO/RO document.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2035b1e9-359c-4545-9353-715f31fd3ad4/sps-redacted-56acffe362fe4813b74cbb765fc39fd0_77f0177922724b29ab5e2d730d91c39f_text_export.jpeg" alt="Upload PO/RO document"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to proceed to Step 3.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/090eac2e-bdd6-45c3-8829-da3ff7cb7e38/sps-redacted-762bbc3732c7401e80c2f606b69105cd_e592c76aafd146ae8d481b18575efc86_text_export.jpeg" alt="Next to Step 3"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Final review</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Click <b>Submit Recharge Request</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/9a0069d3-05bc-4edf-aeb0-a5f7cabbc0cc/sps-redacted-dc2a0b0d251745a4906a7b610a551856_1d8d11c471ff4fa1858e1e5df0e37b5e_text_export.jpeg" alt="Submit Recharge Request"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>PO (Post-Paid) is a post-paid method.</b> You recharge against a purchase order by submitting the PO/RO number, issue date, and document. The request is reviewed before the credit is applied.
+        </div>
+      </section>
+
+      <!-- ---------- RAISE A CREDIT REQUEST (RECHARGE ORDER) GUIDE ---------- -->
+      <section class="view" id="view-credit-request-ro">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Raise a credit request with a Recharge Order</h1>
+        <p class="lede">
+          Recharge your wallet against a recharge order using the RO (Post-Paid) method. This walkthrough
+          covers entering your RO details, uploading the signed document, and submitting your request.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Initiate the credit request</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Manage</b> in the top menu.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3338f27a-9230-4356-b063-02a63bc1b698/sps-redacted-9c457e18489e471eb7795e1071d1395c_04b95b4cc10b423daa6ad1b8d0549cef_text_export.jpeg" alt="Manage in top menu"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Raise Credit Request</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/4b3fdd62-19b5-4246-9c7a-4688b8b2ae9c/sps-redacted-84606ed2c0f346b2943e29437d7faf81_7030a959aa1a434ba1f13d0d75719fc6_text_export.jpeg" alt="Raise Credit Request"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Fill credit details</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Select <b>RO (Post-Paid)</b> as the Payment Method.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e63948ea-ef5e-4cac-8ff7-9dd356be31c1/sps-redacted-8627e76fd3bd4179a62940d99418f2e6_55266970f78c4da7a823ef544e046c6f_text_export.jpeg" alt="Select RO Post-Paid"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/04a47590-43fb-4ef6-b025-4469f9b45aaa/sps-redacted-44ceefeb624f4c63a8823044b6618211_4eb0835dd4fa4452b84ade01997b95e0_text_export.jpeg" alt="RO Post-Paid selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Enter the net amount and click <b>Next</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6b944199-5f95-446b-9296-7f1f78c8f935/sps-redacted-f9ca5d7a03554d479549f2157bdf489d_c1f2efba36f649f99f397cda8cabb9b1_text_export.jpeg" alt="Enter net amount"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3ecfe6ea-5770-4cfb-9981-e4892971292b/sps-redacted-11ba5809bd7d419cbde23680dc325eff_db97a9124d4f42b780e4258d26e5105a_text_export.jpeg" alt="Amount entered"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Upload required documents</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Enter the <b>PO/RO Number</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a3b4abe3-50a4-4691-b668-cdcaaf6d071b/sps-redacted-78cd9d40de2c44d8a6d87d7219720dac_618ffba1de694c9184abcf4ff6cc576f_text_export.jpeg" alt="Enter PO/RO number"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Select the Issue Date.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8783d2ba-dfbb-4890-b70b-f1cdd71edc63/sps-redacted-2aee070b01f94622b5b85ab4c990c3cd_00439a0c69a64e9f8cbb6cc38ccb1dc2_text_export.jpeg" alt="Select issue date"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/427b6ad5-5b25-4164-be3e-fce7014856e2/sps-redacted-1a8cd9376e70463aa0865a4f3971aa15_c237231b4160401686c5ad20245dd284_text_export.jpeg" alt="Issue date selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Upload the signed PO/RO document.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6b308e46-7097-4e51-97b6-ba1ffc19013d/sps-redacted-ebabca4e9f1f4c83b9f54d02ddfb87a6_62af15b20e7a4740b6890c159ced8800_text_export.jpeg" alt="Upload signed document"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to proceed to the summary.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1fad9b24-f6d3-4520-aac8-971cc74dca37/sps-redacted-59b6a2eae9fc4e2683939281f3769100_e58fc3ccafde4aed87794206c68c7f96_text_export.jpeg" alt="Next to summary"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Review and submit</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Click <b>Submit Recharge Request</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d47c1c41-15c8-4671-91e0-027aadd89997/sps-redacted-b52b31b8c8354ba8b138b3c4e1073fee_9ad41ffb56cf41d3aee23955a9be6039_text_export.jpeg" alt="Submit Recharge Request"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>RO (Post-Paid) is a post-paid method.</b> You recharge against a recharge order by submitting the PO/RO number, issue date, and signed document. The request is reviewed before the credit is applied.
+        </div>
+      </section>
+
+      <!-- ---------- RAISE A CREDIT REQUEST (MARKETING VISIBILITY) GUIDE ---------- -->
+      <section class="view" id="view-credit-request-mv">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Raise a Marketing Visibility credit request</h1>
+        <p class="lede">
+          Submit a Marketing Visibility credit request. This method requires a Proforma Invoice (PI) from
+          your account manager. The walkthrough covers entering your contract reference and PI number,
+          uploading the invoice, and submitting your request.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Initiate the credit request</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Manage</b> to open wallet options.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/7ab46215-ba56-4c6d-8d3c-e7728ad1ab21/sps-redacted-f43e9f1015b14a47b670d21486a5e3da_0e7f8cc039d5445f8ee56d9d91a88542_text_export.jpeg" alt="Manage wallet options"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>Raise Credit Request</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8ec5ade0-860f-431e-9e50-c3a30561d92e/sps-redacted-3a44657eeac341b5b94c72095cd324a0_d128935d9a4442289e81c0dfce553f09_text_export.jpeg" alt="Raise Credit Request"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Recharge configuration</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Select <b>Marketing Visibility (PI required)</b> from the Payment Method dropdown.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/0ea8fe2b-2094-421a-9572-96f8cbf0c8e9/sps-redacted-da17e51d835d47c084a46d6a866c07f3_d4b7bcc23123474a8c36f6cebeb9188c_text_export.jpeg" alt="Select Marketing Visibility"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c00cfe6c-2fbe-4df8-ad13-4536fb18aa5e/sps-redacted-89530f25a1664e2c918c0f98e267b8ba_c3caa7833104431d872c4fd64338ea8c_text_export.jpeg" alt="Marketing Visibility selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Enter the net amount.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3856c7c4-dfe5-48c5-b225-a13d4b39bb42/sps-redacted-8afea96c47e6475b9b8ffadeb706bae7_c01a150ed7184279b4cf4c8411d9ddec_text_export.jpeg" alt="Enter net amount"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Next → Step 2</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/fbc8a0bd-3e25-469b-ae55-43a5b5873266/sps-redacted-95609a0029a846f393f14eee1ab29223_0fafbc55e32a430699202f3c5b7e0c81_text_export.jpeg" alt="Next to Step 2"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Document submission</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Enter the <b>Contract Reference</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/4081d1ab-4b07-4175-b091-3360cbcde2fb/sps-redacted-9057ef6a998b4e1ba7e145149df2ca24_f270ace35d224958bd3e548b666dc080_text_export.jpeg" alt="Enter contract reference"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Enter the <b>PI Number</b> (from your KAM).</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/44b67c6f-aad3-483b-abf5-18bf45459786/sps-redacted-7d382087a6244df9bc1a6a1c7431289b_ac36f97a5e7747b4a92bbfdbe6ef4676_text_export.jpeg" alt="Enter PI number"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Upload the <b>Proforma Invoice</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/387cf99c-34fe-4ae5-8bd2-480bdecd8f32/sps-redacted-2e5d75db8cf9483292753d5d72566d2b_ff2ebcb09db94337ac45e51bcf4959ba_text_export.jpeg" alt="Upload proforma invoice"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Click <b>Next → Step 3</b> to review the request.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1e664a8a-8673-4b27-8ce3-a0bf9b799450/sps-redacted-dd99fa85e3a343e098142515c1985458_c44add62d4434163a949ee5d32c21949_text_export.jpeg" alt="Next to review"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Final submission</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Click <b>Submit Recharge Request</b> to complete.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/46c8e521-ddf4-468a-a02d-922270c891d9/sps-redacted-0129687f78a4424e860390d606f685a5_ee0d15e39a4242baa36e48181b356ea4_text_export.jpeg" alt="Submit Recharge Request"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>Marketing Visibility requires a Proforma Invoice (PI) from your account manager.</b> Have your contract reference and PI number ready before you start. The request is reviewed before the credit is applied.
+        </div>
+      </section>
+
       <!-- ---------- COMING SOON VIEWS ---------- -->
       <section class="view" id="view-smart-shopping">
         <div class="eyebrow">Performance</div>
@@ -989,15 +1679,129 @@
 
       <section class="view" id="view-pda">
         <div class="eyebrow">Product Display Ads</div>
-        <h1 class="page-title">Create a PDA campaign</h1>
-        <p class="lede">A step-by-step guide for Product Display Ads is on the way.</p>
-        <div class="soon-block">
-          <h3>This guide will cover</h3>
-          <ul>
-            <li>Selecting the page and category targeting depth</li>
-            <li>Building a product set to serve as your ads</li>
-            <li>Setting your bid and launching the campaign</li>
-          </ul>
+        <h1 class="page-title">Create a Product Display Ad campaign</h1>
+        <p class="lede">
+          Set up and launch a targeted Product Display Ad campaign — select your category and products,
+          then configure budget, bid, and schedule.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Campaign navigation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Select <b>Purplle Ads</b> from the sidebar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ce44ad63-a08b-45cb-bd57-36b42bcbc9d8/sps-redacted-f110c4bb50244643a1f4e0bec8dc4055_2d870b21dee74f59bf640c43deba39b7_text_export.jpeg" alt="Purplle Ads in sidebar"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Product Display Ads</b> under the Awareness section.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2e7bf737-a103-4ee3-9eed-6cb057abafde/sps-redacted-e303d1d7144441b6809ae08988dcc984_fa30032219bb4f7bb01fbdb65f9265eb_text_export.jpeg" alt="Product Display Ads under Awareness"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Create Campaign</b> to start the setup wizard.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/20bd69f4-5c60-4b0b-b81f-a13942e9633b/sps-redacted-e8e234b323264ca7973794fe9e5c4954_bc24e3890f0c47b19efe04ddc6dd5012_text_export.jpeg" alt="Create Campaign"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Page selection</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to confirm the page selection.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e5fa72e8-ea57-447f-88e2-5ba52dec25b4/sps-redacted-1576343b9f8645f693b427987b6585e5_ff43f24f60cd4ca2bc274d6397dcbb09_text_export.jpeg" alt="Confirm page selection"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Targeting setup</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Set the category level (for example, <b>Category L1</b>), choose your category, and click <b>Add</b> to target it.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/90724307-2c28-4cfb-9762-77c8f9111244/sps-redacted-4e475bc2d40d40f2b8150381e0f93706_425af0627680467a93cecf56525ff2aa_text_export.jpeg" alt="Set category level and add"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/646de6a8-15d4-4672-a253-f2047d0995d3/sps-redacted-f4e3013d15ec40b4b2ffa1f7cfbbf01b_199fa2ff89c04443ae362db16711d30c_text_export.jpeg" alt="Category selected"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ad73d13d-a210-4bbe-b221-06aa2e708aaf/sps-redacted-ea6991c9279e4f438de25bb46b082587_80ddf4e1806644429a475a98bdbd1de7_text_export.jpeg" alt="Category added"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to proceed to the products step.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/fa215de7-937a-4e11-a124-97f1f9455ccb/sps-redacted-20f511356cf445dea7f2f743bb26b265_7ac601beeb8a488d81f37c58beb9b73f_text_export.jpeg" alt="Next to products"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Product selection</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Click <b>Add Products</b> to open the item selection window.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b531d562-cf23-4417-9996-474338bb55a9/sps-redacted-4d5d0b80d45e4180814a3ec5c1d94772_361a90dcf08c4106be0a61f31dbb6ed0_text_export.jpeg" alt="Add Products"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Select the checkboxes for the products you want to feature in the ad.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8c32da03-cd81-49b0-b57b-78321b02fc32/sps-redacted-5beba59e248a444cbdd70e18ae916b10_63c59af825e64a21b6d56eb89de261b9_text_export.jpeg" alt="Select products"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b0570d49-a22e-408a-b7ad-0687720ebff6/sps-redacted-6525e6429b844821985d276e11dba1d7_a86cccb9ec9a4e499a0bf526b6059e69_text_export.jpeg" alt="Products selected"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f35cea2b-192c-4158-99e2-671a27ac3b71/sps-redacted-7272b80346884527aae50aa3222df39a_1bc0e01b7d164f8e9df956043f542b65_text_export.jpeg" alt="Products selected"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8acb5c8b-a29d-4276-b4b9-62e23767b994/sps-redacted-dae9fd008d094f569510667656564d8f_4d8d1cf5de8e4f79942a9161a420c8cb_text_export.jpeg" alt="Products selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Click <b>Done</b> to finalize your product selection.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d16be2f7-310e-40f3-9e4e-becb5dcb04f3/sps-redacted-5243eae176d74ecab725c4c2f142a557_dfb9202d9375420e94d0c4076020476b_text_export.jpeg" alt="Done"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to move to campaign configuration.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a9622575-0d06-4dcd-89ec-3dcca98507fa/sps-redacted-6e236bab7e9b4ea794a2fdb78ee61453_937ec31161564e35a8ea4c9f030d194c_text_export.jpeg" alt="Next to configuration"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Campaign configuration</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">11</div><div class="step-body">
+            <div class="step-text">Type a name in the <b>Campaign Name</b> field.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/9b3e57dd-0fb8-4c08-a048-7b9e851f4618/sps-redacted-6957b75eade9464bbc7e6e4d510476ab_0778bc96690342de9d3ddefd3bf749f4_text_export.jpeg" alt="Campaign name"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">12</div><div class="step-body">
+            <div class="step-text">Choose your wallet from the <b>Spend Bucket</b> dropdown.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6379e8b6-dc78-4f69-a2d5-5c0616e78acb/sps-redacted-8c1e011d0d3143c5b418222a856cb122_db1f2b0fc607435f99eed5700827f87a_text_export.jpeg" alt="Spend Bucket dropdown"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/27bc694c-e57e-4416-8c93-d22fe1032306/sps-redacted-4dc9929f565d4ea58a6980da24f36881_5695fe8051fa43a0964f9c3f72fc59e5_text_export.jpeg" alt="Wallet selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">13</div><div class="step-body">
+            <div class="step-text">Select the campaign start date from the calendar picker.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ed9b5d4c-4293-46f0-ad40-9a747759f801/sps-redacted-2c53f3eaeb42401999a97feef0894cb1_fb10290862334b658eabc6911d2cf16d_text_export.jpeg" alt="Start date picker"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">14</div><div class="step-body">
+            <div class="step-text">Enter your <b>CPM Bid</b> and <b>Daily Budget</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e6ecafa1-c86b-48a2-8d77-5ceae35e9ef7/sps-redacted-6fd0a50c7c554c0685c90258087f2269_5f66528658fa4507b0273b3e90f582c2_text_export.jpeg" alt="Enter CPM bid and daily budget"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8f773796-ff3f-45a1-9333-d1b37a20c20d/sps-redacted-c3108eec515743069a1676243e0bbf05_ab1c010fbf7246d6b3f71544f6f063d2_text_export.jpeg" alt="Bid and budget entered"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">15</div><div class="step-body">
+            <div class="step-text">Click <b>Create Campaign</b> to launch.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c4630d99-1cb8-4250-a177-374dd6f5695b/sps-redacted-78ab83f501bd47fd86d19a9d4f1039fd_4376059ff28442aa9e6ab78efd6c8eba_text_export.jpeg" alt="Create Campaign"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>PDA is billed on CPM</b> — cost per 1,000 impressions. Your CPM bid is the amount you bid for every thousand times your ad is shown.
         </div>
       </section>
 
@@ -1082,4 +1886,3 @@
 
 </body>
 </html>
-
