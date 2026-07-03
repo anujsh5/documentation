@@ -133,6 +133,9 @@
   .step-shot{margin-top:14px;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
   .step-shot img{display:block;width:100%;}
 
+  /* ---------- In-guide section label ---------- */
+  .guide-section{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.4px;text-transform:uppercase;margin:40px 0 0;}
+
   /* ---------- Callout ---------- */
   .callout{
     font-size:14px;font-weight:400;color:var(--body);line-height:1.6;
@@ -211,7 +214,10 @@
           <span>Create a Search campaign</span><span class="tag">Guide</span>
         </a>
         <a class="nav-item" data-view="smart-shopping">
-          <span>Create a Smart Shopping campaign</span><span class="tag soon">Soon</span>
+          <span>Create a Smart Shopping campaign</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="edit-smart-shopping">
+          <span>Edit a Smart Shopping campaign</span><span class="tag">Guide</span>
         </a>
       </div>
 
@@ -231,8 +237,17 @@
 
       <div class="nav-group">
         <div class="nav-eyebrow">Reports</div>
+        <a class="nav-item" data-view="analyze-search">
+          <span>Analyze Search performance</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="analyze-smart-shopping">
+          <span>Analyze Smart Shopping performance</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="change-history">
+          <span>Download change history</span><span class="tag">Guide</span>
+        </a>
         <a class="nav-item" data-view="reports">
-          <span>Reports &amp; performance</span><span class="tag soon">Soon</span>
+          <span>Generate &amp; schedule reports</span><span class="tag soon">Soon</span>
         </a>
       </div>
 
@@ -267,7 +282,12 @@
           <a class="kc-card" data-view="smart-shopping">
             <div class="kc-title">Create a Smart Shopping campaign</div>
             <div class="kc-desc">Launch an automated Smart Shopping campaign across performance inventory.</div>
-            <div class="kc-meta soon">Coming soon</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="edit-smart-shopping">
+            <div class="kc-title">Edit a Smart Shopping campaign</div>
+            <div class="kc-desc">Update budget, end date, and category bids on an existing campaign, then save.</div>
+            <div class="kc-meta">Guide available</div>
           </a>
           <a class="kc-card" data-view="pda">
             <div class="kc-title">Create a PDA campaign</div>
@@ -279,10 +299,20 @@
             <div class="kc-desc">Top up, transfer between wallets, and read your balance and ledger.</div>
             <div class="kc-meta soon">Coming soon</div>
           </a>
-          <a class="kc-card" data-view="reports">
-            <div class="kc-title">Reports &amp; performance</div>
-            <div class="kc-desc">Generate, schedule, and read your campaign performance reports.</div>
-            <div class="kc-meta soon">Coming soon</div>
+          <a class="kc-card" data-view="analyze-search">
+            <div class="kc-title">Analyze Search performance</div>
+            <div class="kc-desc">Track metrics like attributed GMV and ROI, and break performance down by product, category, brand, and keyword.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="analyze-smart-shopping">
+            <div class="kc-title">Analyze Smart Shopping performance</div>
+            <div class="kc-desc">Filter metrics and date ranges, and break performance down by product, category, and brand.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="change-history">
+            <div class="kc-title">Download change history</div>
+            <div class="kc-desc">Export the activity log for your campaigns over any date range.</div>
+            <div class="kc-meta">Guide available</div>
           </a>
         </div>
 
@@ -435,18 +465,525 @@
         </div>
       </section>
 
+      <!-- ---------- ANALYZE SEARCH PERFORMANCE GUIDE ---------- -->
+      <section class="view" id="view-analyze-search">
+        <div class="eyebrow">Reports</div>
+        <h1 class="page-title">Analyze Search campaign performance</h1>
+        <p class="lede">
+          Track and evaluate the metrics that matter for your Search campaigns — attributed GMV, ROI, and more —
+          and break performance down by product, category, brand, and keyword.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Campaign navigation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Purplle Ads</b> in the side navigation.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/92f0f40f-8e5b-469b-8958-42e1e9dfa128/sps-redacted-0249b5b40af045539990b5a8ffda26aa_6750bffb682946e4a58688a2d2aae959_text_export.jpeg" alt="Purplle Ads in side navigation"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>Search Campaigns</b> from the expanded menu.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/843904b9-bc8f-4c3d-96dd-557f54d21bd7/sps-redacted-8c7ac68b2e254e309edf05b50a0c98c5_e06886f7f79b4b24807b0b83c0f01cb8_text_export.jpeg" alt="Search Campaigns"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Metric analysis</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click the <b>Analytics</b> icon for the campaign you want to analyze.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/04c5d137-9e4e-4d52-a3d1-7f01f79e645f/sps-redacted-8de9ad1bb7544a79b0fab1247e91918c_92784eba17ca4895aff1e7f41e3198e9_text_export.jpeg" alt="Analytics icon"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Select the metrics you want from the dropdown, then click <b>Update filter</b> to refresh the view.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d175bfa0-e853-4807-81cd-b367d5248319/sps-redacted-7d5356e9dd9241349c1c946bef5e2c07_b0f376dca91b4dd49dde6fb526904e8b_text_export.jpeg" alt="Select metrics and update filter"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6105980a-85ca-4f9b-bbdd-283ff61a7bb4/sps-redacted-78eb537becb04862853bd050db488209_13f1c830f88042519e322fa467dbb0fa_text_export.jpeg" alt="Metric view"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3cf5caef-82e4-40f8-af90-7f4d687e322a/sps-redacted-454148511bb74c3c975b16d99802a937_1999b004d658429b961340f6a1a5d507_text_export.jpeg" alt="Metric view"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/703ddc52-a3ea-4af4-8147-62ebf58e1aae/sps-redacted-2fa0ce2e9937427bb1477ab1cccd2a13_7a188639a7b3483da838353883005619_text_export.jpeg" alt="Metric view"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ed0e8353-2f96-4f0b-97e6-34b11937acc0/sps-redacted-7b297a2da8db4fa7aff1adca11ea9b7f_7821606fd8b94c6f8f16a135489bf57a_text_export.jpeg" alt="Metric view"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/da7a6841-1f26-4ee3-b5c6-6cc8b393deb6/sps-redacted-8322f07f76bf4faebd8902679ba8d732_3fa843ccd5274c6cad27703d108daf14_text_export.jpeg" alt="Metric view"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Open the date range picker, choose your dates, and click <b>Apply</b> to filter the data.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/53faae32-e889-4190-ab95-36663e12594a/sps-redacted-0009355db4014b1a84fbe8e4239a9ce9_3a187b7401ab4baab5c7959c8d14f749_text_export.jpeg" alt="Date range picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/7846dffd-47b1-4ce5-bf21-210e318b14a0/sps-redacted-6bc591a951bf4dabadf4411811e28555_17f69a6c21d54d5ba69413fae313f20d_text_export.jpeg" alt="Select dates"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c64954c3-891f-4de6-b9f4-6de101f6356a/sps-redacted-18cea1fdefd3497d8236bd76021cfdbb_001e9f81a1ba4c8e9affb620f4b7fd04_text_export.jpeg" alt="Apply date filter"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Performance breakdown</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Open the <b>Products</b> tab for product-level performance.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/9eda6448-1cbb-4c9c-9c9d-d9f46ccc7cce/sps-redacted-01bfd88108054f43b41878c86096ac8c_4b3713d6938c485699c044b7f9704302_text_export.jpeg" alt="Products tab"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Open the <b>Categories</b> tab.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/00f2f58f-e582-47cd-97c1-fe1a7733e016/sps-redacted-090056e7473f438c8af944fe89be3db4_203a75b78647455ebc976613ddcf9355_text_export.jpeg" alt="Categories tab"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Open the <b>Brand</b> tab.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1f8058f4-e32c-405b-8f0e-ba2eef21e526/sps-redacted-7c60e03d5a174d0991d037cf34ca6d2b_f676620c421d455798325d2438e7a435_text_export.jpeg" alt="Brand tab"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Open the <b>Search Keyword</b> tab to review keyword-level data.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3ba5e950-6d75-4a1e-927e-62a9b001426d/sps-redacted-1437430257a242188e108fc2189b7696_6cf263bc6bea44ff80c478761f6522fb_text_export.jpeg" alt="Search Keyword tab"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>How outcomes are attributed:</b> metrics like attributed GMV and ROI are based on click-through attribution — a sale is credited to your campaign when a shopper clicks your ad and then purchases.
+        </div>
+      </section>
+
+      <!-- ---------- DOWNLOAD CHANGE HISTORY GUIDE ---------- -->
+      <section class="view" id="view-change-history">
+        <div class="eyebrow">Reports</div>
+        <h1 class="page-title">Download campaign change history</h1>
+        <p class="lede">
+          Access and export the change history for your campaigns — a log of account activity you can
+          retrieve for any date range.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> in the sidebar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/19cccf80-059c-4ebf-9654-efe4738396df/sps-redacted-bf829f973afd41e5a5d8114938565749_c935fb794d474a99826aafe53c988a0b_text_export.jpeg" alt="Purplle Ads in sidebar"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>Search Campaigns</b> under the Performance section.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c1403106-9ca3-439d-bb94-35df224c38b0/sps-redacted-8179c92d159c42c1aadd1c6d7cc17b28_173ba3fcfd7d48c3b82fd8ab7f0e6679_text_export.jpeg" alt="Search Campaigns under Performance"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Select <b>Change History</b> from the campaign actions menu.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/81b3d5da-92a3-4fef-893b-9c72335ff25a/sps-redacted-30fc3464eee34d22971be5b380d56be0_6c1f2876167e4fa7804c6c2a1af9785b_text_export.jpeg" alt="Change History in campaign actions menu"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6105b976-7b83-4aab-bdad-0266fc905139/sps-redacted-c265d97de23a4c54a06fc6874a62b76f_b9cd421fe43a4a26bcf931c7ed4e315c_text_export.jpeg" alt="Change History view"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Set the date range you want the history for.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/29b60b99-0a8a-49fe-ab3b-f0f5bbc7d755/sps-redacted-875bb2141ddd4b69833f77371dc8a379_71a3650bfbdf46f383fb54ababe69040_text_export.jpeg" alt="Set date range"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/79795093-fcfb-4187-ade3-a0091c7d56d5/sps-redacted-2e543292d7964b6787337d4e82ad05f6_5798d85306a04579a49d65a03535bf74_text_export.jpeg" alt="Date range selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Download</b> to export the change history.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/35d7ddf4-f72b-4e62-836a-942f624a1807/sps-redacted-0b7d7b57fb8d4e27ae572d682343bbac_2ddea91d69c9426f87b7f6727788f37d_text_export.jpeg" alt="Download change history"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- EDIT SMART SHOPPING GUIDE ---------- -->
+      <section class="view" id="view-edit-smart-shopping">
+        <div class="eyebrow">Performance</div>
+        <h1 class="page-title">Edit and save a Smart Shopping campaign</h1>
+        <p class="lede">
+          Modify an existing Smart Shopping campaign — update the wallet, daily budget, end date,
+          and category bids — then review and save your changes.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Campaign navigation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Select <b>Purplle Ads</b> from the sidebar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/0bd63707-45f5-46cb-bb9a-46cc44f0e583/sps-redacted-43ce3026ecb64d3c99f016f4e4e9984b_b6c1cb4769d24e949f262372aebb6c3a_text_export.jpeg" alt="Purplle Ads in sidebar"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Go to <b>Smart Shopping</b> under the Performance section.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/0c19b568-30f4-4f95-8311-00d655691061/sps-redacted-ee9a1dfae3f94d8ea9f315b2b325cdc4_f7015334fb5e43eb86b1adb607bb8103_text_export.jpeg" alt="Smart Shopping under Performance"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Update campaign details</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Edit</b> on the campaign you want to change.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3515b25c-db28-42ec-aef8-6b256a8b4013/sps-redacted-fa4042f557c84b38a6701f026b513248_29b2ee385cc7403ea063ea4d284ec54e_text_export.jpeg" alt="Click Edit on campaign"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/355b0f7c-61e0-4ae2-b771-0169ce4d88d7/sps-redacted-23a15763335f49eeb1cda0c4ff92052c_4dd4e8e607b048988538d56bf8a727be_text_export.jpeg" alt="Edit campaign view"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Select a wallet for the campaign from the dropdown.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2244c4e7-1e6e-4b16-88fb-f80e1abb5b10/sps-redacted-dd1926b6697c484b8845cd75e501e68a_b1b4f96de59949b6a22005f3ec4cef4f_text_export.jpeg" alt="Select wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Update the daily budget.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/52aa3b57-d23c-4059-8ec6-835f58654b26/sps-redacted-5ccf9063e77c4e17878f0477010b8a00_793a6d996f2e47b3adf065823ebce404_text_export.jpeg" alt="Update daily budget"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Set the campaign end date and time.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e078b2f5-2c48-43bc-aa53-c554b4dc04f0/sps-redacted-806414a125a14acfa3e8694585b980a5_92e98bf22f6d442084e3055ca4747b1a_text_export.jpeg" alt="Set end date and time"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/749102f5-fc4a-466b-bcc3-6c3c9a79832e/sps-redacted-ae8607d0718f418daa0e0561a9a4c664_892f4ad5f64343df925b3a0d1b15f912_text_export.jpeg" alt="End date picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ff9690ea-1c66-42d5-b985-1e46771ac7fc/sps-redacted-4a0b4e3f18864c88b8bf9f508d203ea6_17ab8b4cdee6445ba35191f1286f4dcc_text_export.jpeg" alt="End date and time set"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to proceed to Product Selection.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/abbb8a3d-7890-4b9d-819d-fbfce7105a20/sps-redacted-64686f7c40a64feea6ca438fc770ce39_d4df90179be14a369216339419879404_text_export.jpeg" alt="Next to Product Selection"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to proceed to Bidding.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1a97f59c-a1b4-4408-a488-29232d757036/sps-redacted-eed4ce514db64c80906cc9df1021c6bd_daae64ddf2394e3db7e0e71e82ca79b2_text_export.jpeg" alt="Next to Bidding"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Adjust bids</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Enter a new value in the category bid field.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f39d0653-923d-4624-a057-bf5d346f9688/sps-redacted-4041710daa4e4c609c532384bb791bbc_3ef4ec9084614f6d85dda956ee16fd19_text_export.jpeg" alt="Enter new category bid"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Review and save</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b> to review your campaign settings.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c36ff47e-eac6-457b-b42e-74b7b8700cee/sps-redacted-abdaf2af8c334bbab8076494d167e2e1_716c3ef678d44e8cba4483055f677759_text_export.jpeg" alt="Next to review"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">11</div><div class="step-body">
+            <div class="step-text">Click <b>Save Campaign</b> to finalize the updates.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c2cf3dc2-9360-455d-89aa-f86688be623d/sps-redacted-1ab53c654406463ea20e6798b9cc86c8_11f3e7e9ee704ff5aba0af4e3281d3e6_text_export.jpeg" alt="Save Campaign"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- ANALYZE SMART SHOPPING PERFORMANCE GUIDE ---------- -->
+      <section class="view" id="view-analyze-smart-shopping">
+        <div class="eyebrow">Reports</div>
+        <h1 class="page-title">Analyze Smart Shopping campaign performance</h1>
+        <p class="lede">
+          Evaluate how your Smart Shopping campaigns are performing — filter by metrics and date range,
+          and break results down by product, category, and brand.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Campaign selection</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Select <b>Purplle Ads</b> from the sidebar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/39b27988-b703-4eb2-aa38-40c9c543fff4/sps-redacted-6691681986b440e8841496eb01564691_0476b5ab409c4e48863129d9ccb1614f_text_export.jpeg" alt="Purplle Ads in sidebar"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>Smart Shopping</b> from the sub-menu.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2c0b87b2-2698-4070-902f-b2040975830f/sps-redacted-7b780c65db1b40acb74e31e5e83518de_8fab27b775ed45a49f69ead07927cef0_text_export.jpeg" alt="Smart Shopping sub-menu"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click the <b>Analytics</b> icon for the campaign you want to analyze.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3b6dfd3d-1309-45e9-86d1-7075fba64e0e/sps-redacted-fa780754358f4bbeab0bf3a3b73e10ee_f61c28eeb79f42fbbae2f3a2e48afd67_text_export.jpeg" alt="Analytics icon"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Metric configuration</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Configure the performance metrics you want and apply them to the report.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a64fc70a-f97f-4b7b-b253-852587d6c12c/sps-redacted-ced855c1e1464bba9b2025e3cb019e3d_36575c3add2e4bd597d0649bbd730aee_text_export.jpeg" alt="Configure metrics"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e819a791-0556-45fe-9d5d-d8c624b92fbe/sps-redacted-141706731b98411f921925b658a1855d_fe04fa3538ac40b6bc041ca5c5c4a351_text_export.jpeg" alt="Metric options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/65713433-3728-4f24-9b5b-d4feb0d03971/sps-redacted-4a62083f20564b0cb99c3281ee45d62f_b3dfd1e5c7044ff38b07a45c0642a6b5_text_export.jpeg" alt="Metric options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f18ecef1-091c-4b87-9509-c982b3031c65/sps-redacted-efd74ff1e58144698c5bb8fdc5451860_7bbde79d13634fedbdb4a20ffa010aed_text_export.jpeg" alt="Metric options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1e9f398f-ed7c-4165-9b69-b200e50346e4/sps-redacted-62933783d8864687ba37b5d165823bc3_e0bb44594af249e18d85318b6596a204_text_export.jpeg" alt="Metric options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d0f2f251-c27e-4dc0-9653-6a2a31b37fbc/sps-redacted-173e206105744f4d8fcbeddba72d8afe_1561d8949508436795e789a603e8f663_text_export.jpeg" alt="Metrics applied"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Performance analysis</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Open the <b>Products</b> tab.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/df616a71-2c31-4b20-bb61-97a625c70650/sps-redacted-61acd92027c44fb5b8767b8c26e25b69_12b5fc1c2d2140309239d3c9241938f5_text_export.jpeg" alt="Products tab"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Open the <b>Categories</b> tab.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f7d505fc-29f7-42ad-bb4f-8614ce49fa90/sps-redacted-f2970f13959a4b9c93dc18b422be9b5b_22fe5faf32f64a7db4757dc27c176203_text_export.jpeg" alt="Categories tab"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Open the <b>Brand</b> tab.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/94d20fdc-34c0-4b00-a3bf-88869dafda01/sps-redacted-dfd68a85d8e3421d8325a7217e6c4d34_fefd1fe68edd4478b86881a28d546c55_text_export.jpeg" alt="Brand tab"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Report filtering</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Update the reporting date range.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/cdaa5689-f713-4049-88b6-0e27e051c85f/sps-redacted-2e138e759cdf48d3a5ea70153bfab77a_93c974c62799459493d671078581496f_text_export.jpeg" alt="Update date range"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/5b85a7cf-46d4-46a5-8081-a41b869acd24/sps-redacted-996a12d4bb674c1996cc923810e30dcd_bedba40244d74bbea885a5024201b3af_text_export.jpeg" alt="Date range picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/809b0352-588b-4b84-8b88-47944a978004/sps-redacted-e97279b83a094dffb0f574eda473cdc2_0a01d2efa5054b10817663203084075f_text_export.jpeg" alt="Date range applied"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Modify the chart metrics to include <b>CPC</b> and <b>CTR</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/eb924a32-5861-4637-a91f-a6d4cd8c007e/sps-redacted-4bac5d9b04bb408fb990c8c57d9ea0b7_abdc066df57b4330b4a568747343c6c2_text_export.jpeg" alt="Modify chart metrics"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f6c00189-b97a-4cb4-80d0-4195de68f976/sps-redacted-4f5051f11f6a492a95a0eaf8700006be_17bba70421834cc4b753d1ccbae7e289_text_export.jpeg" alt="Chart metrics options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/56bf7a8d-12d5-494b-94d2-221fe7690bf9/sps-redacted-f16e2b7d4bd345a0969a91e119994525_35a9313537b74ffd83e867f01ff34f70_text_export.jpeg" alt="Chart metrics options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8e171891-0478-4021-be34-66197d83cb87/sps-redacted-9cfddcd4a2964e9abb4ea9183f63dc73_0e1f4b0ad3364a1582c8b0ee10a0d39b_text_export.jpeg" alt="Chart metrics options"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a21b8a0b-b33f-437c-9662-8db3e702f469/sps-redacted-a556b04036804770946977ae2472a183_d467b4303f634c89bafb2f1338ffdecb_text_export.jpeg" alt="Chart with CPC and CTR"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Click the ellipsis icon to view more options.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/fb5d743e-42bf-4d24-bbec-99192e7ef936/sps-redacted-49f0307d8c2f42d2b0f0aba50d7b7579_1469e75246c64f049955dc62b99758e8_text_export.jpeg" alt="Ellipsis menu"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>How outcomes are attributed:</b> metrics like attributed GMV and ROI are based on click-through attribution — a sale is credited to your campaign when a shopper clicks your ad and then purchases.
+        </div>
+      </section>
+
       <!-- ---------- COMING SOON VIEWS ---------- -->
       <section class="view" id="view-smart-shopping">
         <div class="eyebrow">Performance</div>
-        <h1 class="page-title">Create a Smart Shopping campaign</h1>
-        <p class="lede">A step-by-step guide for launching a Smart Shopping campaign is on the way.</p>
-        <div class="soon-block">
-          <h3>This guide will cover</h3>
-          <ul>
-            <li>Selecting a wallet and setting budget and pacing</li>
-            <li>Choosing products and applying suggested bids</li>
-            <li>Launching and activating the campaign</li>
-          </ul>
+        <h1 class="page-title">Create and launch a Smart Shopping campaign</h1>
+        <p class="lede">
+          Configure and deploy a Smart Shopping campaign on Purplle Ads Platform — covering budget,
+          product selection, category bidding, and activation.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Campaign navigation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Purplle Ads</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c7d543f6-5994-4603-9ab7-09f305552c9d/sps-redacted-d4f7d283deee46bcaa928cee1d16eda1_58f0a17656014295b4b4046eef54a5c4_text_export.jpeg" alt="Purplle Ads"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/1030d634-23fe-480e-ab31-429d3ca253f6/sps-redacted-4d00d4a433174bfa878b1da1cf9383ff_6e01f2b3074a4ebbab913e8eec7ec69b_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>+ Create New Campaign</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/fe8017e7-835a-4360-a189-0ac51299ec59/sps-redacted-998dc3fa4d1f49c78195ea9d78e23eee_12ffa70cb4b247e1a07435ead4625fb1_text_export.jpeg" alt="Create New Campaign"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Basic information setup</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Select your wallet — your Primary wallet or a sub-wallet.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e02e3efd-3bd5-4d56-938a-03a09d1064be/sps-redacted-773502df2e12441dbbe89fc9a14eae38_beff06623bf54ae0926d74ce97a0e96b_text_export.jpeg" alt="Select wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Enter a campaign name.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a04ef075-9adb-411b-85bf-f751a436321c/sps-redacted-59420683f3b049a7bac90a5613dc9671_388b7681166d4fbea37c3bdcf61aea13_text_export.jpeg" alt="Enter campaign name"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Enter the daily budget.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/30261b30-ab3c-43ff-9c5e-b018721d8780/sps-redacted-c5c10a8f45684bffa8d4630dca9f34d5_2d3afbfb7b1d4c819712fcd7e35c5224_text_export.jpeg" alt="Enter daily budget"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Set the campaign start date and time using the picker.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ab871488-7e91-4d1a-9780-c74c0385ee70/sps-redacted-8807e9633fa3423d8fe5f895ca8fc33c_86ace9bc1d23443d96e406b8ada07681_text_export.jpeg" alt="Set start date"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/7af06b82-ec97-422e-bfb7-c155442bd591/sps-redacted-40aefcb716fd4b0c877f0dcc84697f63_fab2a50f639643d2870b087e8173f3f4_text_export.jpeg" alt="Start date picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/4e708f45-9b92-47e0-b2bb-99853909cf71/sps-redacted-b3cb0db31b5e4d7c8dc95a4348dedcf7_bc3eb86a70744228a3169b0e752141e7_text_export.jpeg" alt="Start date picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/14e6f3e9-31ae-4d1f-9e38-93008c30a93d/sps-redacted-a348dcc5bc884e668d1bf1fa72897740_a2446c44c0ef4ec3b9c244cac1fec7f8_text_export.jpeg" alt="Start time picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8fcf9373-7afe-49f6-a80c-8f67327513f7/sps-redacted-95ca426a2f3b4ebb9ecf80ce61011cad_e0d95aa943a742b199f1ed5ef6f3c871_text_export.jpeg" alt="Start time picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/9e332912-912a-4082-8122-ede107b6d330/sps-redacted-eb40bb1a510149e486ad5f110d7ad877_a84019bb1a894b6695fb0078b8beab21_text_export.jpeg" alt="Start date and time set"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Set the campaign end date and time using the picker.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/cdf56925-14a1-494f-867d-3a191f1a94c1/sps-redacted-073100e61b2f436d9a29e0552f5870ea_10d6a103b3ac4d1089e0ac1aeb196685_text_export.jpeg" alt="Set end date"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/997fc8bf-fefb-4910-95da-7d932be319a1/sps-redacted-ea5b53a7e5d74a05989a59998505c541_4f5fd0ec8e294110a013b7e3c86d66c1_text_export.jpeg" alt="End date picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e7122a48-c057-4f26-8425-71f42109c9f5/sps-redacted-341e8d26bdae46e6a4a673adbcf41119_05fda10d4d1a4c71af2df6878dc21437_text_export.jpeg" alt="End date picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/7317940f-01ed-4ee1-9774-13f67fafe906/sps-redacted-0b96c04203a3442c807e68266b427bb3_8d90555a52914982a26e5a6bc7a997c9_text_export.jpeg" alt="End time picker"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/03d338bb-90e6-4869-a76a-f3dbede90eb7/sps-redacted-d139c47f704541f2bded28fe7068afe2_8cece4d568d54fa7ae421956fa967a38_text_export.jpeg" alt="End date and time set"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/48d43d27-5d17-4400-a4e2-7ecbfa57a5b1/sps-redacted-97b413438b804d3aa04977cac817290b_2a19a1679b1c4703a61edc529d67852d_text_export.jpeg" alt="Next"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Product selection</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Select <b>Product Category</b> from the filter field dropdown.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/aaaf3cce-2521-40d9-b97a-c764a8b6c806/sps-redacted-f88dc4a7dfa54ae6831dea94bd17797c_46ee089489c14cbcbfac8b3a3f29df35_text_export.jpeg" alt="Filter by product category"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">11</div><div class="step-body">
+            <div class="step-text">Choose the product category you want from the list.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a687a1eb-a5b9-406e-8c2d-1f3cd86d60d0/sps-redacted-99747463d41e4731bb0a46ee2d06ca8c_3a175fd34a3b45fea7034affd308ac94_text_export.jpeg" alt="Choose category"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">12</div><div class="step-body">
+            <div class="step-text">Click <b>Apply Filters</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6d480180-285e-4fc3-8d52-2e91ad26639e/sps-redacted-0132636a20384d77bdf5f91aa6437464_8b37f526d48e438c8bc21ba6b2076187_text_export.jpeg" alt="Apply Filters"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">13</div><div class="step-body">
+            <div class="step-text">Select the products to include in the campaign.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f4e72d7d-08c4-4119-8178-0d6a81a3c043/sps-redacted-ba3d3c2df9914969874eb6b659b8bd33_65e9e6d356d1417fbaa9f400f400126d_text_export.jpeg" alt="Select products"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2fd5779b-19cd-4939-8728-275e6c85ee26/sps-redacted-a266f831e87f4475b19b3211c894435c_24e5513ced4a4d8e91151d2a0fe3a9ea_text_export.jpeg" alt="Products selected"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">14</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e6582065-7efe-4676-9bbe-e000c7c52b73/sps-redacted-f7044dfc7e2a4900a6c7cbc1a0939676_49b462270f9f45d2928ea933cb82a2cd_text_export.jpeg" alt="Next"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Bidding and review</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">15</div><div class="step-body">
+            <div class="step-text">Enter your bid values for the selected categories.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/756c24a2-3215-4604-982b-0a91dc158ee3/sps-redacted-98370b75f1684878bf2211a11957c46b_eb6968ea85844a98bda26ee843e0e574_text_export.jpeg" alt="Enter bid values"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/5af34f8f-78a9-4a8f-87a5-cb991fb719fe/sps-redacted-850885c5bf6b403c819617a7246d8201_42a064c9c1aa45aaa43d69bad04997f3_text_export.jpeg" alt="Bid values entered"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">16</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b6ead571-5181-4d2f-9f63-aea2db86924d/sps-redacted-53baff213a634ff79ddb251ea1fb00d2_3913ed9dc31445179e64a2557f3fe691_text_export.jpeg" alt="Next"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">17</div><div class="step-body">
+            <div class="step-text">Open the campaign simulation panel to preview estimated delivery.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6a5c9746-43cb-44c8-a77f-54af1eb9f845/sps-redacted-4ec38a16d0db4a62889605a47b07e7e9_58767b5b81724d4b80299a5b9581f41a_text_export.jpeg" alt="Open simulation panel"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">18</div><div class="step-body">
+            <div class="step-text">Close the simulation panel.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/080083b2-fab1-4e98-9cf0-0b7a9fa7c916/sps-redacted-b7011b11454c49f9bc63abd4439173c5_40b74e7c5fbb40f9bcb2e9a499f3c984_text_export.jpeg" alt="Close simulation panel"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">19</div><div class="step-body">
+            <div class="step-text">Click <b>Save &amp; Launch</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6af1c2b5-0d50-4c21-8b03-ce2b458f8623/sps-redacted-25b0f129baa54d2e9b7d7276a4346b7a_d8c7d6ae41e242998207a42ee4eeeb2c_text_export.jpeg" alt="Save and Launch"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">20</div><div class="step-body">
+            <div class="step-text">Search for the campaign in the dashboard.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/918db792-3d5a-487e-81a6-9708ae2f7134/sps-redacted-dbe8ac831c074a28886311f7ef5e2fd9_4f82f659c2b443b89aab4043b5adf4e6_text_export.jpeg" alt="Search for campaign"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e86b4683-8748-4bc6-ad91-aa35e38e4029/sps-redacted-fbb10d3a4b6c402594c4716a2ce3ae0e_460d75adb21c403381e021f3b3adb34f_text_export.jpeg" alt="Campaign in results"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Campaign activation</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">21</div><div class="step-body">
+            <div class="step-text">Select the campaign from the results list.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d6333337-647c-4d79-b4bc-dfdf265c0a79/sps-redacted-ccaf8bcb378d4045b99b28b5fe801742_1e2549a3fb2a4ffbbfdff266e95edb25_text_export.jpeg" alt="Select campaign"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">22</div><div class="step-body">
+            <div class="step-text">Click <b>Activate</b> to take the campaign live.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/78421e4c-c386-4f9d-a5e8-18f5d6298594/sps-redacted-6cca2e99e50d424fb93cd97d0eb9f155_3724dc31c15444df9e43cc51ac98a76b_text_export.jpeg" alt="Activate"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>Smart Shopping and Search run on separate inventories.</b> Setting up a Smart Shopping campaign here doesn't affect your Search campaigns — configure and review each type separately.
         </div>
       </section>
 
@@ -480,8 +1017,8 @@
 
       <section class="view" id="view-reports">
         <div class="eyebrow">Reports</div>
-        <h1 class="page-title">Reports &amp; performance</h1>
-        <p class="lede">A step-by-step guide for reports is on the way.</p>
+        <h1 class="page-title">Generate &amp; schedule reports</h1>
+        <p class="lede">A step-by-step guide for generating and scheduling reports is on the way.</p>
         <div class="soon-block">
           <h3>This guide will cover</h3>
           <ul>
