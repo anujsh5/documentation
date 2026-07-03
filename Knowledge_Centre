@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purplle Ads — Knowledge Centre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F3F7;
+    --card:#FFFFFF;
+    --ink:#06000F;
+    --body:#3A343F;
+    --muted:#9A8F9A;
+    --accent:#9C00AD;
+    --accent-tint:#FBF6FB;
+    --border:#EBDDED;
+    --hair:#EFE7EF;
+    --shadow:0 10px 40px rgba(6,0,15,0.05);
+    --sidebar-w:288px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#06000F;
+      --card:#141014;
+      --ink:#EDE7ED;
+      --body:#CFC4CF;
+      --muted:#B9A9B9;
+      --accent-tint:#1A0F1C;
+      --border:#3A2E3A;
+      --hair:#3A2E3A;
+      --shadow:0 10px 40px rgba(0,0,0,0.35);
+    }
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--bg);color:var(--body);
+    font-family:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+    -webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  img{max-width:100%;height:auto;}
+
+  /* ---------- Layout ---------- */
+  .shell{display:flex;min-height:100vh;}
+  .sidebar{
+    width:var(--sidebar-w);flex-shrink:0;background:var(--card);
+    border-right:1px solid var(--border);padding:28px 20px;
+    position:sticky;top:0;height:100vh;overflow-y:auto;
+  }
+  .main{flex:1;min-width:0;display:flex;flex-direction:column;}
+  .content{max-width:820px;margin:0 auto;width:100%;padding:56px 40px 96px;}
+
+  /* ---------- Brand ---------- */
+  .brand{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:-0.2px;}
+  .brand span{color:var(--accent);}
+  .brand-sub{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;margin-top:6px;}
+
+  /* ---------- Nav ---------- */
+  nav{margin-top:32px;}
+  .nav-group{margin-bottom:26px;}
+  .nav-eyebrow{font-size:10.5px;font-weight:700;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;padding:0 12px;margin-bottom:10px;}
+  .nav-item{
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+    padding:9px 12px;border-radius:10px;font-size:14.5px;font-weight:600;
+    color:var(--body);cursor:pointer;line-height:1.3;transition:background .12s ease,color .12s ease;
+  }
+  .nav-item:hover{background:var(--accent-tint);text-decoration:none;}
+  .nav-item.active{background:var(--accent);color:#fff;}
+  .nav-item.active .tag{background:rgba(255,255,255,0.22);color:#fff;}
+  .nav-item.disabled{color:var(--muted);cursor:default;opacity:0.75;}
+  .nav-item.disabled:hover{background:transparent;}
+  .tag{
+    font-size:9.5px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;
+    padding:3px 7px;border-radius:999px;background:var(--accent-tint);color:var(--accent);white-space:nowrap;
+  }
+  .tag.soon{background:var(--hair);color:var(--muted);}
+
+  /* ---------- Top bar (mobile) ---------- */
+  .topbar{
+    display:none;align-items:center;justify-content:space-between;
+    padding:16px 20px;background:var(--card);border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:20;
+  }
+  .menu-btn{
+    border:1px solid var(--border);background:var(--card);color:var(--ink);
+    border-radius:10px;padding:8px 12px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;
+  }
+
+  /* ---------- Content: eyebrow + headings ---------- */
+  .eyebrow{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1.4px;text-transform:uppercase;}
+  h1.page-title{font-size:32px;font-weight:700;color:var(--ink);line-height:1.2;letter-spacing:-0.5px;margin:10px 0 0;}
+  .lede{font-size:16px;font-weight:400;color:var(--body);line-height:1.65;margin-top:14px;}
+  h2.section{font-size:20px;font-weight:700;color:var(--ink);letter-spacing:-0.3px;margin:44px 0 0;}
+  .hair{border-top:1px solid var(--hair);margin:36px 0;}
+
+  /* ---------- Video slot ---------- */
+  .video-slot{margin-top:28px;}
+  .video-frame{
+    position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;
+    background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);
+  }
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .video-placeholder{
+    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:10px;text-align:center;padding:24px;background:
+      radial-gradient(120% 120% at 50% 0%, var(--accent-tint) 0%, var(--card) 70%);
+  }
+  .video-placeholder .play{
+    width:56px;height:56px;border-radius:999px;background:var(--accent);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(156,0,173,0.35);
+  }
+  .video-placeholder .play svg{margin-left:3px;}
+  .video-placeholder .vp-title{font-size:15px;font-weight:700;color:var(--ink);}
+  .video-placeholder .vp-sub{font-size:13px;font-weight:400;color:var(--muted);}
+
+  /* ---------- Steps ---------- */
+  .steps{margin-top:16px;counter-reset:step;}
+  .step{
+    display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--hair);
+  }
+  .step:last-child{border-bottom:0;}
+  .step-num{
+    flex-shrink:0;width:30px;height:30px;border-radius:999px;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;margin-top:2px;
+  }
+  .step-body{flex:1;min-width:0;}
+  .step-text{font-size:15.5px;font-weight:600;color:var(--ink);line-height:1.5;}
+  .step-shot{margin-top:14px;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+  .step-shot img{display:block;width:100%;}
+
+  /* ---------- Callout ---------- */
+  .callout{
+    font-size:14px;font-weight:400;color:var(--body);line-height:1.6;
+    background:var(--accent-tint);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-top:24px;
+  }
+  .callout b{color:var(--ink);}
+
+  /* ---------- Home cards ---------- */
+  .card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px;}
+  .kc-card{
+    background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;
+    box-shadow:var(--shadow);cursor:pointer;transition:transform .12s ease,border-color .12s ease;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .kc-card:hover{transform:translateY(-2px);border-color:var(--accent);text-decoration:none;}
+  .kc-card .kc-title{font-size:16.5px;font-weight:700;color:var(--ink);letter-spacing:-0.2px;}
+  .kc-card .kc-desc{font-size:14px;font-weight:400;color:var(--body);line-height:1.55;}
+  .kc-card .kc-meta{font-size:11px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;color:var(--accent);margin-top:4px;}
+  .kc-card .kc-meta.soon{color:var(--muted);}
+
+  /* ---------- Coming soon block ---------- */
+  .soon-block{
+    margin-top:28px;background:var(--card);border:1px dashed var(--border);border-radius:16px;
+    padding:32px;text-align:left;
+  }
+  .soon-block h3{font-size:16px;font-weight:700;color:var(--ink);margin:0 0 10px;}
+  .soon-block ul{margin:0;padding-left:20px;color:var(--body);font-size:14.5px;line-height:1.7;}
+
+  .footer-note{font-size:12.5px;color:var(--muted);line-height:1.6;margin-top:56px;}
+
+  /* ---------- View switching ---------- */
+  .view{display:none;}
+  .view.active{display:block;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .card-grid{grid-template-columns:1fr;}
+    .content{padding:36px 22px 72px;}
+    .topbar{display:flex;}
+    .sidebar{
+      position:fixed;left:0;top:0;z-index:30;transform:translateX(-100%);
+      transition:transform .2s ease;box-shadow:0 0 60px rgba(6,0,15,0.25);
+    }
+    .sidebar.open{transform:translateX(0);}
+    .backdrop{display:none;position:fixed;inset:0;background:rgba(6,0,15,0.4);z-index:25;}
+    .backdrop.show{display:block;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Purplle <span>Ads</span></div>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+</div>
+
+<div class="backdrop" id="backdrop"></div>
+
+<div class="shell">
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">Purplle <span>Ads</span></div>
+    <div class="brand-sub">Knowledge Centre</div>
+
+    <nav>
+      <div class="nav-group">
+        <a class="nav-item" data-view="home">Home</a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Performance</div>
+        <a class="nav-item" data-view="search">
+          <span>Create a Search campaign</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="smart-shopping">
+          <span>Create a Smart Shopping campaign</span><span class="tag soon">Soon</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Product Display Ads</div>
+        <a class="nav-item" data-view="pda">
+          <span>Create a PDA campaign</span><span class="tag soon">Soon</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Wallet</div>
+        <a class="nav-item" data-view="wallet">
+          <span>Manage your wallet</span><span class="tag soon">Soon</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Reports</div>
+        <a class="nav-item" data-view="reports">
+          <span>Reports &amp; performance</span><span class="tag soon">Soon</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Awareness</div>
+        <span class="nav-item disabled">
+          <span>Visibility campaigns</span><span class="tag soon">After migration</span>
+        </span>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <div class="main">
+    <div class="content">
+
+      <!-- ---------- HOME ---------- -->
+      <section class="view" id="view-home">
+        <div class="eyebrow">Purplle Ads Platform</div>
+        <h1 class="page-title">Knowledge Centre</h1>
+        <p class="lede">
+          Step-by-step guides for running your advertising on Purplle Ads Platform — campaigns, wallet, and reports.
+          Pick a topic to get started. Video walkthroughs sit at the top of each guide, with written steps below.
+        </p>
+
+        <div class="card-grid">
+          <a class="kc-card" data-view="search">
+            <div class="kc-title">Create a Search campaign</div>
+            <div class="kc-desc">Set up, configure, and launch a keyword-targeted Search campaign end to end.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="smart-shopping">
+            <div class="kc-title">Create a Smart Shopping campaign</div>
+            <div class="kc-desc">Launch an automated Smart Shopping campaign across performance inventory.</div>
+            <div class="kc-meta soon">Coming soon</div>
+          </a>
+          <a class="kc-card" data-view="pda">
+            <div class="kc-title">Create a PDA campaign</div>
+            <div class="kc-desc">Run Product Display Ads with category targeting and product sets.</div>
+            <div class="kc-meta soon">Coming soon</div>
+          </a>
+          <a class="kc-card" data-view="wallet">
+            <div class="kc-title">Manage your wallet</div>
+            <div class="kc-desc">Top up, transfer between wallets, and read your balance and ledger.</div>
+            <div class="kc-meta soon">Coming soon</div>
+          </a>
+          <a class="kc-card" data-view="reports">
+            <div class="kc-title">Reports &amp; performance</div>
+            <div class="kc-desc">Generate, schedule, and read your campaign performance reports.</div>
+            <div class="kc-meta soon">Coming soon</div>
+          </a>
+        </div>
+
+        <p class="footer-note">
+          Need a hand? Reply to any Purplle Ads email or reach out to your account manager.
+        </p>
+      </section>
+
+      <!-- ---------- SEARCH CAMPAIGN GUIDE ---------- -->
+      <section class="view" id="view-search">
+        <div class="eyebrow">Performance</div>
+        <h1 class="page-title">Create and launch a Search campaign</h1>
+        <p class="lede">
+          Set up, configure, and launch a keyword-targeted Search campaign in the Purplle partner portal.
+          This guide covers defining campaign details, selecting products, adding keywords, and activating your campaign.
+        </p>
+
+        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+        <div class="video-slot">
+          <div class="video-frame">
+            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
+            <div class="video-placeholder">
+              <div class="play">
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
+                </svg>
+              </div>
+              <div class="vp-title">Video walkthrough</div>
+              <div class="vp-sub">Coming soon</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to the Purplle partner portal at <a href="https://prism.purplle.com/partner-portal/campaigns/performance/smart_shopping" target="_blank" rel="noopener">prism.purplle.com</a>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/22905671-eed7-4eaf-9b79-1ddf4a5d764e/ascreenshot_7f2e575857fb423fb415cb04c98d9a32_text_export.jpeg" alt="Partner portal landing"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Purplle Ads</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/22905671-eed7-4eaf-9b79-1ddf4a5d764e/ascreenshot_30fcd7ac93264dd494a870c65d73861b_text_export.jpeg" alt="Purplle Ads"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Search Campaigns</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/edd5e41d-ae11-4b49-9747-c929e674b2e8/ascreenshot_b80002edf7c2487088e14639a32da0cb_text_export.jpeg" alt="Search Campaigns"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Click <b>+ Create New Campaign</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/7ce0a16d-2169-4d0b-ad63-b40fdb48c8fa/ascreenshot_bb457fcd1a5e48c19f8dbd59cc31eed6_text_export.jpeg" alt="Create New Campaign"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Select a wallet.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/85ebe509-399b-4b7e-b008-035080eb796e/ascreenshot_7f91ed92761e48599ed351650be085b4_text_export.jpeg" alt="Select a wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Choose your Primary wallet or a sub-wallet.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/e123ff65-c43f-4e93-ad55-901f8f701b6b/ascreenshot_b5361fc1415b44beab343b9e1ac29554_text_export.jpeg" alt="Choose Primary or sub-wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Give the campaign a name.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/c775486a-c797-4bbe-822c-1c63f402401b/ascreenshot_76629871a1b044559881394156b59ee9_text_export.jpeg" alt="Name the campaign"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Set the daily budget.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/e79fb66f-404e-4635-8bfe-d342956ba7fe/ascreenshot_1bdbd04a41be4408a388fad4e936913c_text_export.jpeg" alt="Set daily budget"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">Choose a pacing option — <b>Accelerated</b> or <b>Partitioned</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/ca97bd4d-381e-4746-8e6c-04a20f7eed7a/ascreenshot_1b4318c689d14775afa2edd41db2c55c_text_export.jpeg" alt="Choose pacing"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">10</div><div class="step-body">
+            <div class="step-text">Set a start date and time.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/51f7553b-9c1d-4ba3-bd45-adec1f7965b9/ascreenshot_bb368471e9424666abbc13906fae857a_text_export.jpeg" alt="Set start date and time"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">11</div><div class="step-body">
+            <div class="step-text">Set an end date and time.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/fa6c5862-8263-4fe5-a431-b055499db7eb/ascreenshot_504506130ac24843a9e740f71e6e7aea_text_export.jpeg" alt="Set end date and time"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">12</div><div class="step-body">
+            <div class="step-text">Find products to advertise by <b>Product</b>, <b>Name</b>, <b>Category</b>, <b>Price</b>, or <b>Set Price</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/5d225f03-05db-43d3-a521-57afc18cd229/ascreenshot_ba6470bdf3694160b1c789a6ea2ef7fd_text_export.jpeg" alt="Find products"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">13</div><div class="step-body">
+            <div class="step-text">Select all the products you want to advertise.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/8accd0cc-50aa-481a-84fc-186cf3eb40d9/ascreenshot_972571d1778b49b1af71907a4f8b18dc_text_export.jpeg" alt="Select products"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">14</div><div class="step-body">
+            <div class="step-text">Click <b>Next</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/232b1136-98f4-43fa-a31e-8b9e1a0ac2b4/ascreenshot_55075d6277a444daa2be6c7f3d43f098_text_export.jpeg" alt="Next"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">15</div><div class="step-body">
+            <div class="step-text">Add your keywords.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/0dea0a4a-fb70-4bb7-b4f0-c6b2dbfb6e0c/ascreenshot_90dd08ed3b7d4d6f9391d477f9dab801_text_export.jpeg" alt="Add keywords"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">16</div><div class="step-body">
+            <div class="step-text">Click the keyword field to enter a keyword.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/bbd3cb0a-7bdc-4228-ac40-3ed696d17768/ascreenshot_543059648d2c41fdab9e8465ce8c23fc_text_export.jpeg" alt="Keyword field"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">17</div><div class="step-body">
+            <div class="step-text">Click <b>Add keyword row</b> to add another keyword.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/9c24e0ff-ff16-496f-9acc-bd56f9b19b96/ascreenshot_2aff86d1c0ce462dbe962b8e76476d5a_text_export.jpeg" alt="Add keyword row"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">18</div><div class="step-body">
+            <div class="step-text">Add any keywords you don't want to target in the <b>Negative keywords</b> section.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/cab2f9c5-9f18-4f37-bcd4-2c2e3b766fba/ascreenshot_57d9cb7278fd467686ca837c914fbdf4_text_export.jpeg" alt="Negative keywords"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">19</div><div class="step-body">
+            <div class="step-text">Click <b>Save &amp; Launch</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/f12bcf0b-6279-40d4-81b0-87453ae2f280/ascreenshot_8e19386c14a9493a8e61da2cf89b662e_text_export.jpeg" alt="Save and Launch"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">20</div><div class="step-body">
+            <div class="step-text">Search for the campaign you just created.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/16375413-96ec-4913-9a50-35ecf0cc4e28/ascreenshot_53dc8ceff98d40d18af665a8537a2cdd_text_export.jpeg" alt="Search for campaign"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">21</div><div class="step-body">
+            <div class="step-text">Click <b>Draft</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/f3d5d68c-a844-4fc7-a45f-2406f52348e0/ascreenshot_fe9d8509ef59493d95609c44e4571fe9_text_export.jpeg" alt="Draft"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">22</div><div class="step-body">
+            <div class="step-text">Click <b>Activate</b> to take the campaign live.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/7a40571e-60f5-4890-9ceb-931789762b4d/ascreenshot_a571bc6b549548cd8c329c3dbb2b5768_text_export.jpeg" alt="Activate"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>Search and Smart Shopping run on separate inventories.</b> Creating a Search campaign here does not affect your Smart Shopping campaigns — set up and check each type separately.
+        </div>
+      </section>
+
+      <!-- ---------- COMING SOON VIEWS ---------- -->
+      <section class="view" id="view-smart-shopping">
+        <div class="eyebrow">Performance</div>
+        <h1 class="page-title">Create a Smart Shopping campaign</h1>
+        <p class="lede">A step-by-step guide for launching a Smart Shopping campaign is on the way.</p>
+        <div class="soon-block">
+          <h3>This guide will cover</h3>
+          <ul>
+            <li>Selecting a wallet and setting budget and pacing</li>
+            <li>Choosing products and applying suggested bids</li>
+            <li>Launching and activating the campaign</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="view" id="view-pda">
+        <div class="eyebrow">Product Display Ads</div>
+        <h1 class="page-title">Create a PDA campaign</h1>
+        <p class="lede">A step-by-step guide for Product Display Ads is on the way.</p>
+        <div class="soon-block">
+          <h3>This guide will cover</h3>
+          <ul>
+            <li>Selecting the page and category targeting depth</li>
+            <li>Building a product set to serve as your ads</li>
+            <li>Setting your bid and launching the campaign</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="view" id="view-wallet">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Manage your wallet</h1>
+        <p class="lede">A step-by-step guide for managing your wallet is on the way.</p>
+        <div class="soon-block">
+          <h3>This guide will cover</h3>
+          <ul>
+            <li>Reading your balance across Primary and sub-wallets</li>
+            <li>Adding funds and transferring between wallets</li>
+            <li>Reading your transaction history</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="view" id="view-reports">
+        <div class="eyebrow">Reports</div>
+        <h1 class="page-title">Reports &amp; performance</h1>
+        <p class="lede">A step-by-step guide for reports is on the way.</p>
+        <div class="soon-block">
+          <h3>This guide will cover</h3>
+          <ul>
+            <li>Generating and scheduling reports</li>
+            <li>Downloading your performance data</li>
+            <li>Reading delivery metrics and attributed outcomes</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  var views = document.querySelectorAll('.view');
+  var navItems = document.querySelectorAll('.nav-item[data-view]');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('backdrop');
+
+  function closeMenu(){ sidebar.classList.remove('open'); backdrop.classList.remove('show'); }
+
+  function show(view){
+    var target = document.getElementById('view-' + view);
+    if(!target){ view = 'home'; target = document.getElementById('view-home'); }
+    views.forEach(function(v){ v.classList.remove('active'); });
+    target.classList.add('active');
+    navItems.forEach(function(n){
+      n.classList.toggle('active', n.getAttribute('data-view') === view);
+    });
+    window.scrollTo(0,0);
+  }
+
+  function go(view){
+    if(location.hash !== '#/' + view){ location.hash = '#/' + view; }
+    else { show(view); }
+    closeMenu();
+  }
+
+  // Any element with data-view routes (nav items + home cards)
+  document.querySelectorAll('[data-view]').forEach(function(el){
+    if(el.classList.contains('disabled')) return;
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      go(el.getAttribute('data-view'));
+    });
+  });
+
+  window.addEventListener('hashchange', function(){
+    show((location.hash.replace('#/','')) || 'home');
+  });
+
+  document.getElementById('menuBtn').addEventListener('click', function(){
+    sidebar.classList.toggle('open'); backdrop.classList.toggle('show');
+  });
+  backdrop.addEventListener('click', closeMenu);
+
+  // initial route
+  show((location.hash.replace('#/','')) || 'home');
+</script>
+
+</body>
+</html>
