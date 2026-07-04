@@ -236,6 +236,15 @@
 
       <div class="nav-group">
         <div class="nav-eyebrow">Wallet</div>
+        <a class="nav-item" data-view="wallet">
+          <span>Wallet overview</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="create-sub-wallet">
+          <span>Create a sub-wallet</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="transfer-funds">
+          <span>Transfer funds between wallets</span><span class="tag">Guide</span>
+        </a>
         <a class="nav-item" data-view="credit-request-payu">
           <span>Raise a credit request (PayU)</span><span class="tag">Guide</span>
         </a>
@@ -251,8 +260,11 @@
         <a class="nav-item" data-view="credit-request-mv">
           <span>Raise a credit request (Marketing Visibility)</span><span class="tag">Guide</span>
         </a>
-        <a class="nav-item" data-view="wallet">
-          <span>Manage your wallet</span><span class="tag soon">Soon</span>
+        <a class="nav-item" data-view="auto-credit">
+          <span>Schedule when your wallet is credited</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="view-credit-requests">
+          <span>View your credit requests</span><span class="tag">Guide</span>
         </a>
       </div>
 
@@ -264,11 +276,33 @@
         <a class="nav-item" data-view="analyze-smart-shopping">
           <span>Analyze Smart Shopping performance</span><span class="tag">Guide</span>
         </a>
+        <a class="nav-item" data-view="performance-analytics-dashboard">
+          <span>Performance analytics dashboard</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="filter-campaign-dashboard">
+          <span>Filter your campaign dashboard</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="reports">
+          <span>Export &amp; filter overall reports</span><span class="tag">Guide</span>
+        </a>
         <a class="nav-item" data-view="change-history">
           <span>Download change history</span><span class="tag">Guide</span>
         </a>
-        <a class="nav-item" data-view="reports">
-          <span>Generate &amp; schedule reports</span><span class="tag soon">Soon</span>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Bulk actions</div>
+        <a class="nav-item" data-view="bulk-create">
+          <span>Create campaigns in bulk</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="bulk-update-campaigns">
+          <span>Bulk update campaigns</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="bulk-update-products">
+          <span>Bulk update products</span><span class="tag">Guide</span>
+        </a>
+        <a class="nav-item" data-view="bulk-update-bids">
+          <span>Bulk update bids</span><span class="tag">Guide</span>
         </a>
       </div>
 
@@ -351,9 +385,29 @@
             <div class="kc-meta">Guide available</div>
           </a>
           <a class="kc-card" data-view="wallet">
-            <div class="kc-title">Manage your wallet</div>
-            <div class="kc-desc">Top up, transfer between wallets, and read your balance and ledger.</div>
-            <div class="kc-meta soon">Coming soon</div>
+            <div class="kc-title">Wallet overview</div>
+            <div class="kc-desc">Tour the wallet screen — balances, wallet details, and the create, move, and recharge actions.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="create-sub-wallet">
+            <div class="kc-title">Create a sub-wallet</div>
+            <div class="kc-desc">Set up a dedicated sub-wallet with a name and opening transfer amount.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="transfer-funds">
+            <div class="kc-title">Transfer funds between wallets</div>
+            <div class="kc-desc">Move funds into a Performance, Display, or sub-wallet.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="auto-credit">
+            <div class="kc-title">Schedule when your wallet is credited</div>
+            <div class="kc-desc">Choose when your credit is applied. Available for all methods except PayU.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="view-credit-requests">
+            <div class="kc-title">View your credit requests</div>
+            <div class="kc-desc">Find and open individual credit request records to review their details.</div>
+            <div class="kc-meta">Guide available</div>
           </a>
           <a class="kc-card" data-view="analyze-search">
             <div class="kc-title">Analyze Search performance</div>
@@ -368,6 +422,41 @@
           <a class="kc-card" data-view="change-history">
             <div class="kc-title">Download change history</div>
             <div class="kc-desc">Export the activity log for your campaigns over any date range.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="performance-analytics-dashboard">
+            <div class="kc-title">Performance analytics dashboard</div>
+            <div class="kc-desc">Choose the metrics to display and download your campaign performance.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="filter-campaign-dashboard">
+            <div class="kc-title">Filter your campaign dashboard</div>
+            <div class="kc-desc">Isolate your campaigns by a specific date range, then reset the view.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="reports">
+            <div class="kc-title">Export &amp; filter overall reports</div>
+            <div class="kc-desc">Filter by campaign and date, download results, and switch between funnel views.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="bulk-create">
+            <div class="kc-title">Create campaigns in bulk</div>
+            <div class="kc-desc">Download the bulk template to set up many campaigns at once.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="bulk-update-campaigns">
+            <div class="kc-title">Bulk update campaigns</div>
+            <div class="kc-desc">Adjust settings like daily budget across many campaigns in one file.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="bulk-update-products">
+            <div class="kc-title">Bulk update products</div>
+            <div class="kc-desc">Update the products in your campaigns at scale with a template.</div>
+            <div class="kc-meta">Guide available</div>
+          </a>
+          <a class="kc-card" data-view="bulk-update-bids">
+            <div class="kc-title">Bulk update bids</div>
+            <div class="kc-desc">Adjust your campaign bids at scale, then upload the completed file.</div>
             <div class="kc-meta">Guide available</div>
           </a>
         </div>
@@ -386,20 +475,9 @@
           This guide covers defining campaign details, selecting products, adding keywords, and activating your campaign.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_To_Create_And_Launch_A_Search_Campaign_On_Purplle__SZkBdg8DSxeelfF4cKttqg?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -530,20 +608,9 @@
           and break performance down by product, category, brand, and keyword.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_To_Analyze_Purplle_Search_Campaign_Performance__nnlyJ4KYT9-uronvzxPjBg?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -623,20 +690,9 @@
           retrieve for any date range.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_to_Download_Purplle_Ad_Campaign_Change_History__qBG-F_nHSXKaUj55Paht2Q?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -680,20 +736,9 @@
           and category bids — then review and save your changes.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_To_Edit_And_Save_A_Purplle_Smart_Shopping_Campaign__NcCmi8NURB6p-12LmYOPpg?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -778,20 +823,9 @@
           and break results down by product, category, and brand.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/Analyzing_Smart_Shopping_Campaign_Performance_on_Purplle__S8EC2QdOQmKVl6Jxjm9Waw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -883,20 +917,9 @@
           update, then steps through the edit wizard to save.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_to_Update_Purplle_Ads_Campaign_Budget__F3ILgOgPQ_OWFh7O55xjJA?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -957,20 +980,9 @@
           Smart Shopping campaign — so you can see how bids and budget affect projected results before you launch.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/Campaign_Simulation_Smart_Shopping_Campaigns__s8JZDikzTVGGz1_cbIOZEg?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -1082,20 +1094,9 @@
           payment method and entering your amount, through to the review stage.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_To_Initiate_A_Credit_Request_via_PayU__KXnHVGKtSBKAuxa6H1Fqdg?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -1146,20 +1147,9 @@
           wallet and payment method, entering your amount, and submitting your UTR and payment proof.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_to_Submit_a_Bank_Transfer_Credit_Request__pLYfMceLQreq9x6f30jgrw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -1318,20 +1308,9 @@
           covers entering your RO details, uploading the signed document, and submitting your request.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_To_Raise_A_Recharge_Order_Credit_Request__diCfMMevQHCd6O6a2wkwxA?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -1411,20 +1390,9 @@
           uploading the invoice, and submitting your request.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_to_Submit_a_Marketing_Visibility_Credit_Request__59fzsohFRW2eUBlpPWctLQ?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -1497,6 +1465,220 @@
         </div>
       </section>
 
+      <!-- ---------- CREATE A SUB-WALLET GUIDE ---------- -->
+      <section class="view" id="view-create-sub-wallet">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Create a new sub-wallet</h1>
+        <p class="lede">
+          Set up a dedicated sub-wallet to manage funds separately. This walkthrough covers naming your
+          sub-wallet, setting an opening transfer amount, and finalizing the setup.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Create_a_New_Sub-wallet__roiHwU0VTR61IWMg1GWTdA?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Open <b>Balance &amp; Manage</b> in the sidebar.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/758eda76-bdb5-4b54-a519-352a5f63880d/sps-redacted-018443c5d07b44b2b55652723085dd61_b586ffa44c6443ef942796f80b318425_text_export.jpeg" alt="Balance and Manage"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Select <b>Overview</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c2ed11f0-90dc-46b0-9b9b-2bca661cb9a5/sps-redacted-2e32a0e1c5bf459ea7ad26f0689cd397_5087a90d3bc045e9a39c7f65161d10db_text_export.jpeg" alt="Overview"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Create Sub-wallet</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/03db5e23-9de1-4b1c-a4bb-65225599f012/sps-redacted-4377136eeaaa434da2e081245f7179ad_1985af365db6490e905658b9f55b7e79_text_export.jpeg" alt="Create Sub-wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Enter the sub-wallet name, opening transfer amount, and any notes, then click <b>Create Sub-wallet</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/0aae065c-1367-4e44-ad30-2bb53a114706/sps-redacted-d74735168dbc400ebc584751bb1155ab_cae9c72a40b8487fa80a50910fb97d0b_text_export.jpeg" alt="Sub-wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/bba32365-9f2b-4f2f-a267-e7088a34387b/sps-redacted-8d1759bcf1dd4f34b3affb809ab56ae7_0b8b67327659446e9929597d13522ac0_text_export.jpeg" alt="Sub-wallet details entered"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/02a487e5-5de9-4142-9ca7-17c85e2315ca/sps-redacted-6525945e4f0f40089195c19187ddd51b_6c7a9157f86c4adab34260700a976603_text_export.jpeg" alt="Sub-wallet created"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b2549062-5925-41d5-8faf-363e50d6e834/sps-redacted-9961e36abf9a4ff79411c2e578ecbdf9_8d75e2b06420415e9f5a4d3e647d35f0_text_export.jpeg" alt="Confirmation"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Close</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/5a55192c-f7d9-47e4-8edb-ef36fa7526b4/sps-redacted-26856f113e174bbcad25bc535d2cecfb_b39734b385f3493387e107368fb76c1d_text_export.jpeg" alt="Close"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- TRANSFER FUNDS GUIDE ---------- -->
+      <section class="view" id="view-transfer-funds">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Transfer funds to a Performance, Display, or sub-wallet</h1>
+        <p class="lede">
+          Move funds from your Primary wallet into a Performance, Display, or sub-wallet. This walkthrough
+          covers choosing the destination, entering the amount, and completing the transfer.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Transfer_Funds_to_a_Performance_Display_or_Sub_Wallet__37x1y09OTfqkOpU83slZQw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Open <b>Balance &amp; Manage</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/cf0e1ba6-a514-4c39-9637-c834321d43f6/sps-redacted-1ce554dd64c34249b496307bedca1158_fb1018b0e8d84ac8a16521df6746172b_text_export.jpeg" alt="Balance and Manage"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Overview</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e3662883-5f88-497b-900c-d3c948736420/sps-redacted-ece66dedc50348b4baf4ee1c56cb8a6c_41da896164d34fd88931a8100bb5be28_text_export.jpeg" alt="Overview"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Move Funds</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/02fb4fca-05dc-4b33-a9c6-b5c792f92f88/sps-redacted-ea1533815073414d84902028d4fa272a_69fde891448c421db1ede9a6e32baf5d_text_export.jpeg" alt="Move Funds"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Choose the destination wallet type (for example, <b>Performance</b>).</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/57e78973-abc0-4a8d-8e02-b9a06d54ffaa/sps-redacted-67667371e0404608bb958c9a00a1882e_9738c10e9ed94894914e72074e24dae4_text_export.jpeg" alt="Choose destination wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Choose the specific destination wallet (for example, a sub-wallet).</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b4a85d8e-4105-4e25-b7ef-25a7d393d268/sps-redacted-59940f0c74984817b82e3b784e9c963c_df53b67b9dd64889b13dd047e8b0d0df_text_export.jpeg" alt="Choose sub-wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Enter the amount to transfer.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b883748d-53a8-4c34-a399-a5ff75374baa/sps-redacted-4b12737cec9f4ea88395ca8b14f864cb_6913f953db1043e1950c038891d46d75_text_export.jpeg" alt="Enter amount"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Add an optional note.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ee95dba4-2e34-4b12-aef6-15cd9720c2d0/sps-redacted-44bca17cb40d4da1a050e3217f794c66_285b95419da2477dbd079d6c0c6a7c10_text_export.jpeg" alt="Add note"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">8</div><div class="step-body">
+            <div class="step-text">Click <b>Transfer Instantly</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/eed60aaf-9c04-4f29-b4b9-6632be93ccf1/sps-redacted-1b8eb35760c94c919adaccad40ba4b87_2ecdb97063754feeaa70367d6094b3d3_text_export.jpeg" alt="Transfer Instantly"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">9</div><div class="step-body">
+            <div class="step-text">The transfer is complete. It appears in the ledger as a <b>Move Funds — In</b> entry on the destination wallet.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/4bd8415d-716c-4e9f-acd0-a84e00a382dd/sps-redacted-ef31ea02e0824dd8890b4b52a9c08fae_10b7eb1660be4d18939b1a51eb1d0da5_text_export.jpeg" alt="Move Funds In entry"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          <b>Transfers between your own wallets are instant.</b> This is different from a credit request, which adds new funds and (for non-PayU methods) is reviewed first.
+        </div>
+      </section>
+
+      <!-- ---------- SCHEDULE AUTO-CREDIT GUIDE ---------- -->
+      <section class="view" id="view-auto-credit">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">Schedule when your wallet is credited</h1>
+        <p class="lede">
+          For non-PayU credit methods, you can choose when the credit is applied to your wallet. This
+          option isn't available for PayU, which auto-confirms.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Choose_when_to_auto-credit_your_wallet__KQBRhhMSS_mlm1Ay4penyg?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Open <b>Balance &amp; Manage</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c8cd6610-0513-44ce-8bec-0ebdd9ff6293/sps-redacted-cf61c0cf02ae46539d73b20748a46a92_a55381f7a26b4977b9d3d702b49f0627_text_export.jpeg" alt="Balance and Manage"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Overview</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f734ae7b-9686-4474-bcee-0c963126e667/sps-redacted-61f4a3c0d4314c8aa26c521cc8e97c7b_5162d88912fd4075a97fe8f621bdb3e8_text_export.jpeg" alt="Overview"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>+ Recharge Wallet</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/937b68c5-8996-4650-b3ce-8c2419322d34/sps-redacted-16c5d7605b784e80a09d6fd5186b69b0_d47070a67e134197aa62ea2c1828ae3b_text_export.jpeg" alt="Recharge Wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Note the payment methods: <b>PayU</b> auto-confirms (≤ ₹4.5L) and can't be scheduled.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c87179b2-bffa-40dd-b83a-6744982a9e5e/sps-redacted-1ff89693c8e74ee9a9db4b9ba6159259_5c036662e3c5417fbf5c53b250a6530f_text_export.jpeg" alt="PayU method"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Select a non-PayU method (for example, <b>NEFT / RTGS / Bank Transfer</b>) to enable scheduling.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3fea7fcc-8983-46fd-ae31-fb35bc75186c/sps-redacted-1b267a3c6a4e4d489115d4ee96ae8f5d_897d6110d7864d46bda8d61586ec9ada_text_export.jpeg" alt="Select non-PayU method"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Choose when the credit should be applied to your wallet.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a82c6885-48fa-4e2b-8c37-84f93cec4f2f/sps-redacted-ceb127fc176b4f4e8248095ea63c5da1_3a19d6ac27334cedaa4b4514363add6a_text_export.jpeg" alt="Choose credit timing"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/20d01fa0-9080-4880-b3e8-83a1708648f3/sps-redacted-a3a07446274b456e9f1989f82ed867a9_2ed37993f5f94dbcae08942c066bac32_text_export.jpeg" alt="Credit timing selected"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          Scheduling is available for all credit methods except <b>PayU</b>, which is credited automatically on confirmation.
+        </div>
+      </section>
+
+      <!-- ---------- VIEW CREDIT REQUESTS GUIDE ---------- -->
+      <section class="view" id="view-view-credit-requests">
+        <div class="eyebrow">Wallet</div>
+        <h1 class="page-title">View your credit requests</h1>
+        <p class="lede">
+          Find and open individual credit request records to review their details.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Navigate_My_Credit_Requests__Q0C8n0FKSg2dqBj_hkidSQ?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Open <b>Balance &amp; Manage</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3b7d799e-6f11-4c5a-bf17-0403743758bb/sps-redacted-76d9e53383da4593844d18e7e23fef45_8bb678a8920343e2b8ae808711746073_text_export.jpeg" alt="Balance and Manage"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Overview</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/52ce7e67-0982-4d1a-8537-3581594b77b5/sps-redacted-9d4c78ea75a04c8d9721ebd9b17aa43c_dfaf2ae4dc0848f6bffc3dc2f0fdab24_text_export.jpeg" alt="Overview"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Page through your credit requests using <b>Go to next page</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/7e9badfb-faea-4f44-977d-65bb57a37426/sps-redacted-7e543ffec1164e58a84e6c9fa7e2699d_4c3a584a714d47d3ac293bffabc15c65_text_export.jpeg" alt="Next page"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Click <b>View</b> on any request to open its details.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/480bf468-63b3-46bc-a560-b58081860fec/sps-redacted-84bf60debbc947179359d8b5d98c5e61_154c089e5e4c4805bc07ec0effe0ba2b_text_export.jpeg" alt="View request"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/48a737bd-1c68-439e-a632-e18349d99045/sps-redacted-c73edeea512f4497953a94139978e908_f81f1c9fea89436f9d41103b11957d83_text_export.jpeg" alt="Request details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/459068d4-cdbc-4d1e-a9fb-89656fd3de08/sps-redacted-b9b774b1855e48dbb88cfa43f5e52629_8c4ab8fb07374cd1b2f9f20ac807f4c7_text_export.jpeg" alt="Another request detail"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Close</b> to return to the list. Repeat for any other request you want to review.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/99ef2f6f-be34-4328-a64f-3a67d2c47286/sps-redacted-2a622749010b4284a7ddf7954b71203a_b38aa06025364214beac5914ae83893d_text_export.jpeg" alt="Close"></div>
+          </div></div>
+        </div>
+      </section>
+
       <!-- ---------- COMING SOON VIEWS ---------- -->
       <section class="view" id="view-smart-shopping">
         <div class="eyebrow">Performance</div>
@@ -1506,20 +1688,9 @@
           product selection, category bidding, and activation.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/Create_and_Launch_a_Purplle_Smart_Shopping_Campaign__6WDELXY5RKqK_8vZa5I-Bw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -1674,20 +1845,9 @@
           then configure budget, bid, and schedule.
         </p>
 
-        <!-- VIDEO SLOT — paste the Trupeer embed iframe inside .video-frame, then delete the .video-placeholder div -->
+                <!-- VIDEO SLOT — Scribe movie embed -->
         <div class="video-slot">
-          <div class="video-frame">
-            <!-- <iframe src="PASTE_TRUPEER_EMBED_URL" allowfullscreen></iframe> -->
-            <div class="video-placeholder">
-              <div class="play">
-                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 2.5L18 11L2 19.5V2.5Z" fill="#fff"/>
-                </svg>
-              </div>
-              <div class="vp-title">Video walkthrough</div>
-              <div class="vp-sub">Coming soon</div>
-            </div>
-          </div>
+          <iframe src="https://scribehow.com/embed/How_to_Create_a_Product_Display_Ad_Campaign___0MB6dhQQy2wYVZIA3BSTw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
         </div>
 
         <div class="hair"></div>
@@ -1796,29 +1956,364 @@
 
       <section class="view" id="view-wallet">
         <div class="eyebrow">Wallet</div>
-        <h1 class="page-title">Manage your wallet</h1>
-        <p class="lede">A step-by-step guide for managing your wallet is on the way.</p>
-        <div class="soon-block">
-          <h3>This guide will cover</h3>
-          <ul>
-            <li>Reading your balance across Primary and sub-wallets</li>
-            <li>Adding funds and transferring between wallets</li>
-            <li>Reading your transaction history</li>
-          </ul>
+        <h1 class="page-title">Wallet overview</h1>
+        <p class="lede">
+          A quick tour of the wallet screen: view your balances, open a wallet's details, and find the
+          actions to create a sub-wallet, move funds, and recharge.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/Wallet_Overview__vOVJdJLgRVusYwoa7HnHAw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Click <b>Balance &amp; Manage</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/65a6d986-8db4-4fc3-a0d2-52dcc6ae116a/sps-redacted-3531264225de4a65827acd6cfba8ae13_827f02cb9dce47efb22ecfda11ffed00_text_export.jpeg" alt="Balance and Manage"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Overview</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/35b98aff-f20e-4a3c-9605-9452fb1c7f31/sps-redacted-f23a239f8696401c99cc3c2396b0a19a_f82008c0d8df4986ba73e2a85e5edd2c_text_export.jpeg" alt="Overview"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>More information</b> on a wallet to view its balance details. Each wallet has its own details panel.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ad59e0ad-4a8a-43b5-9516-fd285c1236c9/sps-redacted-b56522d100894a5db7337f05511e9b68_c38c262e53ea477ebec03596dbec3cdb_text_export.jpeg" alt="Wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/de55e3f9-fae9-4d83-b761-98e63b491ba9/sps-redacted-597cca8bb03c495daa389954e6886c96_d483e79a84c64dc29767197d35e4cb4f_text_export.jpeg" alt="Wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/5019d132-1256-4173-b656-28f23e620b3c/sps-redacted-eb9cf4999e644479b9d60992ff9170ac_e0cb6b9085954485abc72d42dc5bb63d_text_export.jpeg" alt="Wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/dc14cd5b-92e9-48d1-a67e-505f90a067c6/sps-redacted-1c222f02e22f4cbea5a656d1a76f188a_670c1862dd6a4a0f9adf989836bad703_text_export.jpeg" alt="Wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/cd70004a-fad3-4f2a-beb3-9b8d1968b167/sps-redacted-07903b6b23f84202b151c50c6ba1a64a_e29242ee19354b5e83a9b19b3ba1d933_text_export.jpeg" alt="Wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a1cc9f69-5823-432d-9cea-4bd9cf3272b9/sps-redacted-2a7cc70d1f1a4b4e83d91674761b0941_7e1966972c15455ab6a3821e6c026446_text_export.jpeg" alt="Wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f4f64a07-67f9-4b54-8991-2af914b49d9a/sps-redacted-e5700ca661584a45aeff60fc1de09c55_47a599787f7346c7afcecf9bacf04f83_text_export.jpeg" alt="Wallet details"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/371386bb-bb74-440a-b64e-5bd3517daa2c/sps-redacted-9e4846b2b8d34fc992a48b70517d9c29_dac37e4004b846afb2f64a3c18aac6f9_text_export.jpeg" alt="Wallet details"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Click <b>Create Sub-wallet</b> to open the create dialog.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/bd809692-0dce-4861-92a5-a4c8bd36dc81/sps-redacted-91f88bcaa34d4cfc95a38d5062b6437d_0a576099ff4043efa8a6db75f2e7d5af_text_export.jpeg" alt="Create Sub-wallet"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Move Funds</b> to open the transfer dialog, then choose the source wallet.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/53f0e7e7-9397-4f52-8acc-bad207df9562/sps-redacted-9dace119c788499db7b9aee93e82b56e_d21641abdb734e0c97652e4ada449c98_text_export.jpeg" alt="Move Funds"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Click <b>+ Recharge Wallet</b> to open the recharge options.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/85963fb9-021e-4803-92ea-ec1d0713bed3/sps-redacted-cf0e89c073ad40909145d59f856b211b_2d761b600891478383f5c38a93911e22_text_export.jpeg" alt="Recharge Wallet"></div>
+          </div></div>
+        </div>
+
+        <div class="callout">
+          This overview walks through the main wallet actions. For the full step-by-step on each — creating a sub-wallet, moving funds, and recharging — see the dedicated guides in this section.
         </div>
       </section>
 
       <section class="view" id="view-reports">
         <div class="eyebrow">Reports</div>
-        <h1 class="page-title">Generate &amp; schedule reports</h1>
-        <p class="lede">A step-by-step guide for generating and scheduling reports is on the way.</p>
-        <div class="soon-block">
-          <h3>This guide will cover</h3>
-          <ul>
-            <li>Generating and scheduling reports</li>
-            <li>Downloading your performance data</li>
-            <li>Reading delivery metrics and attributed outcomes</li>
-          </ul>
+        <h1 class="page-title">Export, filter, and navigate overall reports</h1>
+        <p class="lede">
+          Filter your campaign performance by campaign and date, download results, and switch between
+          funnel views to break performance down different ways.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_To_Export_Filter_and_Navigate_Overall_Reports__-JRchqjHS0OrH7226U4Nnw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="guide-section">Filter and download</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> and open <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ab62bebe-cbf0-4db0-9fd8-3fa68c2267d8/sps-redacted-a12a6bc9c0bc41ff99341ef4b7a7c65d_4baa47c6744b40b6bac8724ad7c79dce_text_export.jpeg" alt="Purplle Ads"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8c920e9b-24e4-4580-a009-5bbdc21e8dd8/sps-redacted-7b84592cc62b469cb99b7d85dbf986a0_21dd9972f3e14fc7b516c22e30f96169_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Add a filter — for example, by <b>Campaign ID</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/fd7f7f29-41d6-420c-8c78-1f829813e83b/sps-redacted-31d23e1d86e84b3e8d8e6cf4396d2113_334c49a46a304884ae28a613cf6e7d37_text_export.jpeg" alt="Campaign ID filter"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6d41f7bd-40c3-476b-bcb8-97b8dc077f55/sps-redacted-7e30bb86cba84116873117b8b3bb87ca_66c667342b7a4e7d97f66507244a8daf_text_export.jpeg" alt="Add filter"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Set your date range and click <b>Apply</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/0b230088-7710-4602-81c8-6816b3dda869/sps-redacted-fdcdfcea88b5414ba6ea5ad3c72f6fff_fa0f215bc03e46fa894599703a8b5bdf_text_export.jpeg" alt="Date range"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8b4ab481-d197-465a-8c78-aaa9b4f11068/sps-redacted-08365f4d646f494d8000aec104cc1327_a9d09c124e6f4d3ca3575aaeaf4ce2bf_text_export.jpeg" alt="Apply"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Click the ellipsis icon, choose <b>Download results</b>, then <b>Download</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d295361e-308a-47a2-bf8c-bdcf76e0a1d7/sps-redacted-21f93f83633f49448a57465bc6bd224b_dbf139da537a428ebaa639cf4fa94e94_text_export.jpeg" alt="Download results"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3d0d802d-7e00-414e-9d8c-63f891f78c62/sps-redacted-edd83124b30d4a36b9e87d7629520570_d6f0aff926f744009ebf936bdd91f852_text_export.jpeg" alt="Download"></div>
+          </div></div>
+        </div>
+
+        <div class="guide-section">Explore funnel views</div>
+        <div class="steps">
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Switch between funnel views — <b>Product Funnel</b>, <b>Category Funnel</b>, <b>Keyword Funnel</b>, and <b>Campaign Funnel</b> — to break performance down different ways.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/eef45ae1-f6c7-4bc7-b60c-76c8a1726f6c/sps-redacted-6f012b085ba84ffca183675fbfdd24a8_f95c2c5d61404c4e80eff574211a6cda_text_export.jpeg" alt="Product Funnel"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/46d01681-3abd-4852-bf3c-0cedc10e7e24/sps-redacted-a32b97705de34e51a78c6b0c3d62fb60_ba606ab87df64341a94e9dbdf5708a0a_text_export.jpeg" alt="Category Funnel"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/d0122a28-cf98-4d02-890b-9261f5ff90ab/sps-redacted-93c63b8ac47245c7af73cfb634d9394d_104a0df42d65437cbd42e8c9586a2c4f_text_export.jpeg" alt="Keyword Funnel"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/94085ff3-d17d-4b30-a0e0-e22df0ddcbb2/sps-redacted-958e9c1aaa77444384462316655f99a0_74db1acf1f3c4a6f935e8ee3d84eb883_text_export.jpeg" alt="Campaign Funnel"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">6</div><div class="step-body">
+            <div class="step-text">Adjust the date range for a funnel view and click <b>Apply</b> to update it.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/4f1ff778-dbfe-4057-8d92-623fd016047c/sps-redacted-611fd88b9b7a4824a651f27216bb2f0b_6d8572308b9a40baae057b8cc1c8f353_text_export.jpeg" alt="Funnel date range"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/4020a656-da69-40ed-ab7e-facd5975e851/sps-redacted-5274fba7da3446a28caecc1b363cad7e_78856186dfec44e08f04dcdf0a81bd13_text_export.jpeg" alt="Apply funnel date"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">7</div><div class="step-body">
+            <div class="step-text">Use the <b>Performance</b> tab and <b>Add filter</b> to refine the view further.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/30359b38-7da8-4c56-85d3-a1d0f77ff8f5/sps-redacted-9af2c93efea242f693a9fa700c01e790_1b745fdb816f41dfa5b33ca317b08880_text_export.jpeg" alt="Performance tab"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/704a8a25-ad1c-441d-aad8-128fd2f8fb53/sps-redacted-aa2ac10455fc421ead16665b183fe166_60657cda3bec4a9496adb8acf6ded10d_text_export.jpeg" alt="Add filter"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- PERFORMANCE ANALYTICS DASHBOARD GUIDE ---------- -->
+      <section class="view" id="view-performance-analytics-dashboard">
+        <div class="eyebrow">Reports</div>
+        <h1 class="page-title">Navigate the performance analytics dashboard</h1>
+        <p class="lede">
+          Access your campaign performance metrics, choose which metrics to display, and download the
+          results for your reporting.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Navigate_the_Performance_Campaign_Analytics_Dashboard__rwl2-ttAQza2cZC5T0z7fQ?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> and open <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/10b4eda5-e8e5-4b4d-93de-df054c9dfb4a/sps-redacted-6a218b6e646e41a9883b082042234db6_d873e8853c224504a47dbb7c83dd6d3e_text_export.jpeg" alt="Purplle Ads"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/5dc6f13e-add8-44f1-a046-547b0ef3d891/sps-redacted-553a99cb8c714342aa59e9f964cb0089_748bbb8df63e42d68d3270ae24777e5d_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Open the <b>Performance Summary</b> view.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e26847fb-c582-4498-84c0-ab639614d7f5/sps-redacted-605a94f1903d49588173303cf6ebb952_73f47e1857a1403f9250f09acb351977_text_export.jpeg" alt="Performance Summary"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Open <b>Metrics</b> and choose the metrics to display (for example, <b>Ad Clicks</b> and <b>Ad Impressions</b>).</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/8f60b5e0-71ab-4f8e-bec6-d1a079b02876/sps-redacted-127b05ec503540fe9db66d6b80e694a1_1c630a8314fc4f7294aef3ee8b21d5a8_text_export.jpeg" alt="Metrics"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2c9d99ab-00de-4af6-a106-1e44f71fbf0b/sps-redacted-49f65e332fa2445fa3b10d1e1bf97093_c7b9301a8dfa405eab15fd3e03ffdd20_text_export.jpeg" alt="Ad Clicks"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2512f41c-925f-4d71-a9ed-f78cf78bdb41/sps-redacted-9dd0df4d58924d848a4c56b80ad9f8f2_2151f77e244e4fe4baf10588e8516f6b_text_export.jpeg" alt="Ad Impressions"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Click <b>Update filter</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/ee38109d-0d60-447b-8a5e-4030f2d71932/sps-redacted-bb727fba17e44b98ae1a6848d6b870ff_adea7e9b4ffb44eeb9412ab023ca993d_text_export.jpeg" alt="Update filter"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click the ellipsis icon, choose <b>Download results</b>, then <b>Download</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f4bf6b46-092f-4104-9da0-64f7f0a6575e/sps-redacted-3bd288f52bc14e859d1b84854c22f659_0379ee73b4174a4ab1a20d555efc27f0_text_export.jpeg" alt="Ellipsis"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c65a9075-1b7a-4a94-8210-82cc8b7bad05/sps-redacted-53c6baecb3cc480797236698028ffc09_d4a81932a2e64ebf80494250dd44c9c9_text_export.jpeg" alt="Download results"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/eaf4433a-c494-4537-86d6-e547393c28af/sps-redacted-82eff744c23f4257b5edd0c156919b99_8a09e410327845c8a8fec3b9edc8e7cb_text_export.jpeg" alt="Download"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- FILTER CAMPAIGN DASHBOARD GUIDE ---------- -->
+      <section class="view" id="view-filter-campaign-dashboard">
+        <div class="eyebrow">Reports</div>
+        <h1 class="page-title">Filter your campaign dashboard by date</h1>
+        <p class="lede">
+          Isolate your Smart Shopping campaigns by a specific date range, then reset the view when you're done.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Navigate_the_Live_Campaign_Dashboard__oUJZf3-bQI6uNGfS7Hr89A?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> and open <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/78304d9e-019f-4f2c-b00c-bbbeebc33360/sps-redacted-d8c0e06e292d4e13bc2006fa67b7bb01_29a072b9b98749b6b4a1585ed5a72449_text_export.jpeg" alt="Purplle Ads"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e72ed2a9-6937-4e07-a48a-c1d4ac4d6d9e/sps-redacted-5122a823bc1b4b1caa9ac45f2f4c29a9_fb166c4cc6bc426b88ecc48785f6ce9f_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Filter</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/f597cdbc-65ac-4c27-b17c-4718df9abafb/sps-redacted-9b29c63a288547b1ab3ab9e34fab7c6b_0aae0b991a324fcfa9dd96157e0820e8_text_export.jpeg" alt="Filter"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Choose <b>Status Date</b> as the filter field.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/bf8c544d-2802-438e-a00c-3ce04f747492/sps-redacted-0771234c964c4cf39d55cbc32783a997_56e0dcf70b034667bd0e4686b18ebe19_text_export.jpeg" alt="Status Date"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">4</div><div class="step-body">
+            <div class="step-text">Set the start date, then the end date.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/0218f6c5-b4be-4ec0-bcc7-d2d7a69aaae5/sps-redacted-e1c054d7666a4989b5588cf0874b8f3e_b90e8be1ee8b43e78bcdb1028ac878f2_text_export.jpeg" alt="Start date"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a3d713c5-7db8-4142-a6c2-16d097a8e623/sps-redacted-de833b88e00a4d9fa4ae0da01c9f843f_865a8680127e44d69d695e40ac9fb7c5_text_export.jpeg" alt="End date"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">5</div><div class="step-body">
+            <div class="step-text">Click <b>Clear</b> to reset the filter when you're done.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/5f12b29b-223b-4647-be8d-87fa5e7b5737/sps-redacted-bcaf9577a5d74c17a222ef8eb39ec4d8_bbea92e4d7e44b239182dc32d6e6d95c_text_export.jpeg" alt="Clear"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- BULK: CREATE CAMPAIGNS ---------- -->
+      <section class="view" id="view-bulk-create">
+        <div class="eyebrow">Bulk actions</div>
+        <h1 class="page-title">Create campaigns in bulk</h1>
+        <p class="lede">
+          Download the bulk campaign creation template to set up many campaigns at once. Fill it in offline,
+          then upload it through the same dialog.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Create_Campaigns_in_Bulk__ZQxA1SjRRBqCu6qCgMah4g?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> and open <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/6792fe62-6a64-416c-9f2e-5ecc4ad5b986/sps-redacted-0339c611ba404067a0e5637739a77c65_eed0fdc6e0274a58a6ac0df90f1ca772_text_export.jpeg" alt="Purplle Ads"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/28e967c2-f474-4ce0-af87-684dcd3f2f3a/sps-redacted-7a672779c42249389f743d4191f9880d_068ac9eca0bf44de804fd2f6730797d3_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Bulk Campaign Create</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/738eb1e7-7e58-456d-98e5-810e37eb0e18/sps-redacted-65643c3cb56640d4a267628eeddaddfa_4492a42ee50a457dbccd1d86feebd940_text_export.jpeg" alt="Bulk Campaign Create"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Download Template</b>, fill it in offline, then upload it through the bulk creation dialog.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/5a2c3635-fc45-4928-91d6-513e9cc06619/sps-redacted-95b7bdd86c8641e69978f9b611e9bd08_dc55f465dfc84e4c9eefd689b76c5651_text_export.jpeg" alt="Download Template"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/71c320fc-4714-424e-af93-9fddfd76c2e2/sps-redacted-0ccc82fc6e3d490db945b0d4c0e87a4c_ba16df51293f4055adc089de15363ecd_text_export.jpeg" alt="Bulk creation dialog"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- BULK: UPDATE CAMPAIGNS ---------- -->
+      <section class="view" id="view-bulk-update-campaigns">
+        <div class="eyebrow">Bulk actions</div>
+        <h1 class="page-title">Bulk update campaigns</h1>
+        <p class="lede">
+          Download the bulk update template to adjust campaign settings like daily budget in one go.
+          Fill it in offline, then upload it through the same dialog.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Bulk_Update_Campaigns__RhlnAig5QESZO4Hd82uQbQ?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> and open <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a8c07561-bfd7-4cbd-9277-ebaaaebe601f/sps-redacted-7ea51981c95d43e78bbf629d03938bcd_1147fb8128e0407ab4a3a84c496fca00_text_export.jpeg" alt="Purplle Ads"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/75c63f13-3317-429b-b6b5-2ed078490a68/sps-redacted-43435ce76d954981a4ac3bde58c27062_b2f6899a8c3b46c582da8eb88c5bd583_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Bulk Edit</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/a842a302-cff7-4707-b0a4-5733d2d754f6/sps-redacted-dfc764f3310f416f86fd3ecc40f5f8a9_7806d4d4792348d08f5c6c17e66bb715_text_export.jpeg" alt="Bulk Edit"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Download Template</b>, update your values offline, then upload it through the bulk update dialog.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/3f482cac-58bc-47d4-b7c4-763926726cad/sps-redacted-9d065704f66644f382b1b6db7169f670_c5dc8fe1589a4b2dbeabd37d879da0e2_text_export.jpeg" alt="Download Template"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b38c0209-d516-49f0-83ab-6301f0dcf9a1/sps-redacted-0d10d78b534246d0a89018bd58f0d745_796458998b5c4505b2f8a2b1424e7620_text_export.jpeg" alt="Bulk update dialog"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- BULK: UPDATE PRODUCTS ---------- -->
+      <section class="view" id="view-bulk-update-products">
+        <div class="eyebrow">Bulk actions</div>
+        <h1 class="page-title">Bulk update products</h1>
+        <p class="lede">
+          Download the bulk products template to update the products in your campaigns at scale.
+          Fill it in offline, then upload it through the same dialog.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Bulk_Update_Product_for_Campaigns__BsfqOGpUTXa8DOaQwnpkbQ?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> and open <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/515d5328-c618-4332-a631-5f07787ac350/sps-redacted-a89e0bd1d5df4781a030afde5c84a0d1_af4d7c6fc95543c4b8b6f2490e7c7666_text_export.jpeg" alt="Purplle Ads"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/32dbebcd-9bb6-41d1-a980-7d083229ac6b/sps-redacted-d1f46610b1314a56ab9cfdc1594c920b_6d78efba1641460993793f980eaeba84_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Bulk Product Update</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/9b1d6b69-acb8-46ef-8030-42b89b4c6bc2/sps-redacted-8c129e9e9df64b03acdbc8778c3227b5_fd28bae4ef2c4e288161641df6eaf19c_text_export.jpeg" alt="Bulk Product Update"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Download Template</b>, update your products offline, then upload it through the bulk products dialog.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/2dcc8c51-6aa5-4ed7-bcc3-e795196e7fe1/sps-redacted-0c4e05e3d174444386f6aeb1a811bc73_034b8676237247779cbfd4c771097095_text_export.jpeg" alt="Download Template"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/cdade318-dae9-47ab-83cf-6b9843ed3a9e/sps-redacted-1c592d1ca22d4db48b9b83031f0110f0_e34616a81fff4fc3affcede9410ae572_text_export.jpeg" alt="Bulk products dialog"></div>
+          </div></div>
+        </div>
+      </section>
+
+      <!-- ---------- BULK: UPDATE BIDS ---------- -->
+      <section class="view" id="view-bulk-update-bids">
+        <div class="eyebrow">Bulk actions</div>
+        <h1 class="page-title">Bulk update bids</h1>
+        <p class="lede">
+          Download the bulk bids template to adjust your campaign bids at scale, then upload the completed
+          file back into the platform.
+        </p>
+
+        <!-- VIDEO SLOT — Scribe movie embed -->
+        <div class="video-slot">
+          <iframe src="https://scribehow.com/embed/How_to_Bulk_Update_Bids_for_Campaigns__p_vgKrhDTku1jaB6_2H9Tw?as=video" width="100%" height="800" allow="fullscreen" style="aspect-ratio: 16 / 12; border: 0; min-height: 480px; border-radius:16px;"></iframe>
+        </div>
+
+        <div class="hair"></div>
+
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-body">
+            <div class="step-text">Go to <b>Purplle Ads</b> and open <b>Smart Shopping</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/dc2e0cb7-1b80-4857-96ac-242eb9f425e5/sps-redacted-7be6f66c274f466d9ca75a1b303ce2d6_1eef24d924aa4b9783f68a34e6e35e25_text_export.jpeg" alt="Purplle Ads"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/84b159c8-db58-4c0d-a850-aff3ee005c50/sps-redacted-d774c9518e634a0c82ddc8d1d208d8b0_03db450b0f9f480d8b9e6cbc31970548_text_export.jpeg" alt="Smart Shopping"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">2</div><div class="step-body">
+            <div class="step-text">Click <b>Bulk Update Bids</b>.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/b36ea38b-6138-4996-b0f8-b9d4dbb1f2c1/sps-redacted-67456a01306e42799a66ed869fbe791a_f67b4a71b0764e16bd50f054aa71279e_text_export.jpeg" alt="Bulk Update Bids"></div>
+          </div></div>
+
+          <div class="step"><div class="step-num">3</div><div class="step-body">
+            <div class="step-text">Click <b>Download Template</b>, update your bids offline, then drag and drop the completed XLSX file to upload it.</div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/e24ded7a-6e1e-4279-8b3c-5c6a101fca8b/sps-redacted-1200c673b1ea473e8383d9933eccc06c_c138d64d1e514a0e9fde786696ffe687_text_export.jpeg" alt="Download Template"></div>
+            <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/62908be7-e76c-4100-b7b7-6394fd9bf5e0/sps-redacted-9d31b54c389b4c938df4ed3f69accd4d_4722ce4a7d2d4c1dac91403eb5a7ad30_text_export.jpeg" alt="Upload XLSX"></div>
+          </div></div>
         </div>
       </section>
 
