@@ -221,6 +221,23 @@
   .def-body .pill{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);
     background:var(--accent-tint);border:1px solid var(--border);border-radius:999px;
     padding:1px 8px;margin-left:6px;vertical-align:middle;}
+
+  /* ---------- Examples & tips ---------- */
+  :root{--ok:#1f9d5b;--no:#c2433a;}
+  @media (prefers-color-scheme: dark){ :root{--ok:#41c483;--no:#e57a70;} }
+  .eg{margin-top:12px;border:1px solid var(--border);border-radius:12px;background:var(--accent-tint);
+    padding:14px 16px;display:flex;flex-direction:column;gap:8px;}
+  .eg-kw{font-size:13px;color:var(--body);}
+  .eg-kw b{color:var(--ink);}
+  .eg-row{font-size:13.5px;line-height:1.5;color:var(--body);display:flex;gap:8px;align-items:flex-start;}
+  .eg-tag{flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;
+    padding:2px 8px;border-radius:999px;margin-top:1px;}
+  .eg-yes .eg-tag{color:var(--ok);border:1px solid var(--ok);}
+  .eg-no .eg-tag{color:var(--no);border:1px solid var(--no);}
+  .tip{margin-top:14px;padding:12px 16px;border-left:3px solid var(--accent);
+    background:var(--accent-tint);border-radius:0 10px 10px 0;font-size:14px;line-height:1.6;color:var(--body);}
+  .tip b{color:var(--accent);}
+  .tips{margin-top:6px;display:flex;flex-direction:column;gap:10px;}
 </style>
 </style>
 </head>
@@ -653,6 +670,14 @@
           </div>
         </div>
 
+        <div class="guide-section">A quick worked example</div>
+        <div class="eg">
+          <div class="eg-kw">A campaign gets <b>1,000 impressions</b>, <b>40 clicks</b>, <b>₹400 spend</b>, and <b>₹4,000</b> attributed revenue.</div>
+          <div class="eg-kw">CTR = 40 ÷ 1,000 = <b>4%</b></div>
+          <div class="eg-kw">CPC = ₹400 ÷ 40 = <b>₹10</b></div>
+          <div class="eg-kw">ROAS = ₹4,000 ÷ ₹400 = <b>10×</b></div>
+        </div>
+
         <div class="callout">
           <b>Outcomes use 7-day click-through attribution.</b> Metrics like attributed GMV and ROAS credit a sale only when a shopper clicked your ad and then purchased within 7 days.
         </div>
@@ -731,11 +756,21 @@
         <div class="def-list">
           <div class="def">
             <p class="def-term">Exact match</p>
-            <p class="def-body">Your ad is eligible only when a shopper's search matches your keyword exactly. Tightest control, narrowest reach. Use it for the terms you're most sure about.</p>
+            <p class="def-body">Your ad is eligible only when a shopper's search matches your keyword exactly. Tightest control, narrowest reach — use it for the terms you're most sure about.</p>
+            <div class="eg">
+              <div class="eg-kw">Keyword: <b>blue kajal diwali</b></div>
+              <div class="eg-row eg-yes"><span class="eg-tag">Shows for</span> blue kajal diwali</div>
+              <div class="eg-row eg-no"><span class="eg-tag">Won't show</span> premium blue kajal diwali · blue kajal</div>
+            </div>
           </div>
           <div class="def">
             <p class="def-term">Phrase match</p>
-            <p class="def-body">Your ad is eligible when your keyword overlaps with the shopper's search — for example, when your keyword appears within a longer search. Wider reach than exact, while staying relevant. Pair it with negative keywords to keep out searches you don't want.</p>
+            <p class="def-body">Your ad is eligible when your keyword appears inside the shopper's search. Wider reach than exact, while staying relevant. Pair it with negative keywords to keep out searches you don't want.</p>
+            <div class="eg">
+              <div class="eg-kw">Keyword: <b>blue kajal</b></div>
+              <div class="eg-row eg-yes"><span class="eg-tag">Shows for</span> blue kajal waterproof · premium blue kajal pencil · blue kajal for diwali</div>
+              <div class="eg-row eg-no"><span class="eg-tag">Won't show</span> kajal for blue eyes · lip balm</div>
+            </div>
           </div>
         </div>
 
@@ -743,12 +778,24 @@
         <div class="def-list">
           <div class="def">
             <p class="def-term">What they do</p>
-            <p class="def-body">Negative keywords block your ad from showing on specific searches — useful for filtering out irrelevant, off-brand, or low-intent traffic so you don't pay for clicks that won't convert. They're set at the campaign level and are applied before your keywords are matched.</p>
+            <p class="def-body">Negative keywords block your ad from showing on specific searches — useful for filtering out irrelevant, off-brand, or low-intent traffic so you don't pay for clicks that won't convert. They're set at the campaign level and applied before your keywords are matched.</p>
           </div>
           <div class="def">
             <p class="def-term">Negative exact vs negative phrase</p>
-            <p class="def-body">A negative exact keyword blocks only the exact search you specify. A negative phrase keyword blocks searches that contain that phrase. Start narrow to avoid accidentally blocking useful traffic.</p>
+            <p class="def-body">A negative exact keyword blocks only the exact search you specify. A negative phrase keyword blocks any search that contains that phrase. Start narrow so you don't accidentally block useful traffic.</p>
+            <div class="eg">
+              <div class="eg-kw">Negative phrase: <b>remover</b></div>
+              <div class="eg-row eg-no"><span class="eg-tag">Blocks</span> kajal remover · eye makeup remover</div>
+              <div class="eg-row eg-yes"><span class="eg-tag">Still shows</span> blue kajal waterproof</div>
+            </div>
           </div>
+        </div>
+
+        <div class="guide-section">Setup tips</div>
+        <div class="tips">
+          <div class="tip"><b>Tip</b> — Start with exact match on your top proven terms, then layer in phrase match to widen reach once you see what's converting.</div>
+          <div class="tip"><b>Tip</b> — Add negative keywords from day one for obvious mismatches (e.g. "remover", competitor terms). It's the fastest way to stop wasted spend on phrase match.</div>
+          <div class="tip"><b>Tip</b> — Keep keywords tightly themed per campaign. A focused keyword set is easier to read in reporting and bids more efficiently.</div>
         </div>
 
         <div class="callout">
@@ -820,11 +867,24 @@
           <div class="def">
             <p class="def-term">Lower target = more volume</p>
             <p class="def-body">A lower ROAS target bids more aggressively and wins more, so you spend faster and reach more shoppers. A higher target bids more conservatively — more efficient, but less volume and slower spend. Adjust the target to dial scale up or down.</p>
+            <div class="eg">
+              <div class="eg-kw">Same budget, different targets:</div>
+              <div class="eg-row eg-yes"><span class="eg-tag">1.5×</span> aggressive bids, wins more, budget spends fast — go here for scale</div>
+              <div class="eg-row eg-yes"><span class="eg-tag">2×</span> balanced reach and efficiency</div>
+              <div class="eg-row eg-no"><span class="eg-tag">3×+</span> conservative bids, fewer wins, budget may underspend</div>
+            </div>
           </div>
           <div class="def">
             <p class="def-term">Picking a sensible target</p>
             <p class="def-body">Very low targets lead to very aggressive spend; very high targets can limit how much your campaign spends. Start near the return you actually need and adjust based on results.</p>
           </div>
+        </div>
+
+        <div class="guide-section">Setup tips</div>
+        <div class="tips">
+          <div class="tip"><b>Tip</b> — Set your target to the return you genuinely need, not the highest number you'd love. Overshooting starves the campaign of volume.</div>
+          <div class="tip"><b>Tip</b> — Give it a few days before judging. Bids settle as the system learns, so early numbers aren't the full picture.</div>
+          <div class="tip"><b>Tip</b> — If you're spending too slowly, lower the target in small steps rather than one big jump, and watch how volume responds.</div>
         </div>
 
         <div class="callout">
@@ -1010,6 +1070,13 @@
             <div class="step-text">Click <b>Activate</b> to take the campaign live.</div>
             <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-02/7a40571e-60f5-4890-9ceb-931789762b4d/ascreenshot_a571bc6b549548cd8c329c3dbb2b5768_text_export.jpeg" alt="Activate"></div>
           </div></div>
+        </div>
+
+        <div class="guide-section">Setup tips</div>
+        <div class="tips">
+          <div class="tip"><b>Tip</b> — Start with a tight, themed keyword list and use exact match on your strongest terms; add phrase match to widen reach once you see what converts. See <b>How keyword matching works</b> for examples.</div>
+          <div class="tip"><b>Tip</b> — Add a few negative keywords before you launch to cut obvious wasted clicks from day one.</div>
+          <div class="tip"><b>Tip</b> — Set a daily budget you're comfortable spending in full, then adjust once you have a few days of data.</div>
         </div>
 
         <div class="callout">
@@ -2250,6 +2317,13 @@
           </div></div>
         </div>
 
+        <div class="guide-section">Setup tips</div>
+        <div class="tips">
+          <div class="tip"><b>Tip</b> — Group similar products into a campaign so your bids and reporting stay clean and easy to read.</div>
+          <div class="tip"><b>Tip</b> — If you know the return you need, consider <b>Smart ROAS bidding</b> — set a target and a budget and let the system handle the bids. Otherwise start with clear category bids.</div>
+          <div class="tip"><b>Tip</b> — Set a realistic daily budget and give the campaign a few days to settle before judging performance.</div>
+        </div>
+
         <div class="callout">
           <b>Smart Shopping and Search run on separate inventories.</b> Setting up a Smart Shopping campaign here doesn't affect your Search campaigns — configure and review each type separately.
         </div>
@@ -2365,6 +2439,12 @@
             <div class="step-text">Click <b>Create Campaign</b> to launch.</div>
             <div class="step-shot"><img loading="lazy" src="https://colony-recorder.s3.amazonaws.com/files/2026-07-03/c4630d99-1cb8-4250-a177-374dd6f5695b/sps-redacted-78ab83f501bd47fd86d19a9d4f1039fd_4376059ff28442aa9e6ab78efd6c8eba_text_export.jpeg" alt="Create Campaign"></div>
           </div></div>
+        </div>
+
+        <div class="guide-section">Setup tips</div>
+        <div class="tips">
+          <div class="tip"><b>Tip</b> — Pick product sets and categories that match your objective, and start with a focused selection; expand once you see what performs.</div>
+          <div class="tip"><b>Tip</b> — Fund your Display wallet before launching so the campaign can start serving without interruption.</div>
         </div>
 
         <div class="callout">
