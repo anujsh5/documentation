@@ -186,6 +186,42 @@
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important;scroll-behavior:auto !important;}
   }
+
+  /* ---------- Sidebar search ---------- */
+  .side-search{position:relative;margin:4px 0 22px;}
+  .side-search input{
+    width:100%;padding:10px 12px 10px 34px;font:inherit;font-size:14px;
+    color:var(--ink);background:var(--card);border:1px solid var(--border);
+    border-radius:10px;outline:none;
+  }
+  .side-search input:focus{border-color:var(--accent);}
+  .side-search input::placeholder{color:var(--muted);}
+  .side-search .s-icon{position:absolute;left:11px;top:50%;transform:translateY(-50%);
+    width:15px;height:15px;opacity:.5;pointer-events:none;}
+  .search-results{display:none;flex-direction:column;gap:4px;}
+  .search-results.show{display:flex;}
+  .nav-wrap.hidden{display:none;}
+  .search-result{
+    display:block;padding:9px 11px;border-radius:10px;cursor:pointer;
+    border:1px solid transparent;text-decoration:none;
+  }
+  .search-result:hover{background:var(--accent-tint);border-color:var(--border);}
+  .sr-eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
+  .sr-title{font-size:14px;font-weight:600;color:var(--ink);margin-top:1px;}
+  .sr-snippet{font-size:12px;color:var(--muted);margin-top:2px;line-height:1.4;}
+  .sr-snippet b{color:var(--body);font-weight:700;}
+  .sr-empty{padding:10px 11px;font-size:13px;color:var(--muted);}
+
+  /* ---------- Glossary / definitions ---------- */
+  .def-list{display:flex;flex-direction:column;gap:22px;margin-top:6px;}
+  .def{padding-bottom:20px;border-bottom:1px solid var(--hair);}
+  .def:last-child{border-bottom:0;}
+  .def-term{font-size:18px;font-weight:700;color:var(--ink);margin:0 0 6px;}
+  .def-body{font-size:15px;line-height:1.6;color:var(--body);margin:0;}
+  .def-body .pill{display:inline-block;font-size:12px;font-weight:700;color:var(--accent);
+    background:var(--accent-tint);border:1px solid var(--border);border-radius:999px;
+    padding:1px 8px;margin-left:6px;vertical-align:middle;}
+</style>
 </style>
 </head>
 <body>
@@ -203,9 +239,44 @@
     <div class="brand">Purplle <span>Ads</span></div>
     <div class="brand-sub">Knowledge Centre</div>
 
-    <nav>
+    <div class="side-search">
+      <svg class="s-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="searchInput" type="text" placeholder="Search guides &amp; terms…" autocomplete="off" aria-label="Search the knowledge centre">
+    </div>
+    <div class="search-results" id="searchResults"></div>
+
+    <nav class="nav-wrap" id="navWrap">
       <div class="nav-group">
         <a class="nav-item" data-view="home">Home</a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Basics</div>
+        <a class="nav-item" data-view="what-is-purplle-ads">
+          <span>What is Purplle Ads</span><span class="tag">Start here</span>
+        </a>
+        <a class="nav-item" data-view="performance-metrics">
+          <span>Performance metrics</span><span class="tag">Glossary</span>
+        </a>
+        <a class="nav-item" data-view="wallet-terms">
+          <span>Wallet &amp; billing terms</span><span class="tag">Glossary</span>
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-eyebrow">Concepts</div>
+        <a class="nav-item" data-view="keyword-matching">
+          <span>How keyword matching works</span><span class="tag">Concept</span>
+        </a>
+        <a class="nav-item" data-view="display-formats">
+          <span>Display ad formats</span><span class="tag">Concept</span>
+        </a>
+        <a class="nav-item" data-view="smart-roas">
+          <span>Smart ROAS bidding</span><span class="tag">Concept</span>
+        </a>
+        <a class="nav-item" data-view="max-performance-cpc">
+          <span>Max Performance CPC</span><span class="tag soon">Coming soon</span>
+        </a>
       </div>
 
       <div class="nav-group">
@@ -329,6 +400,41 @@
         </p>
 
         <div class="card-grid">
+          <a class="kc-card" data-view="what-is-purplle-ads">
+            <div class="kc-title">What is Purplle Ads</div>
+            <div class="kc-desc">New here? Start with an overview of the platform and the ad types you can run.</div>
+            <div class="kc-meta">Start here</div>
+          </a>
+          <a class="kc-card" data-view="performance-metrics">
+            <div class="kc-title">Performance metrics</div>
+            <div class="kc-desc">Definitions for spend, impressions, clicks, CTR, CPC, orders, revenue, and ROAS.</div>
+            <div class="kc-meta">Glossary</div>
+          </a>
+          <a class="kc-card" data-view="wallet-terms">
+            <div class="kc-title">Wallet &amp; billing terms</div>
+            <div class="kc-desc">Wallets, credit requests vs transfers, PayU, post-paid, and Marketing Visibility.</div>
+            <div class="kc-meta">Glossary</div>
+          </a>
+          <a class="kc-card" data-view="keyword-matching">
+            <div class="kc-title">How keyword matching works</div>
+            <div class="kc-desc">Exact and phrase match, and how negative keywords keep your ads off the wrong searches.</div>
+            <div class="kc-meta">Concept</div>
+          </a>
+          <a class="kc-card" data-view="display-formats">
+            <div class="kc-title">Display ad formats</div>
+            <div class="kc-desc">Visibility, Takeovers, and Bundles — the display formats rolling out after migration.</div>
+            <div class="kc-meta">Concept</div>
+          </a>
+          <a class="kc-card" data-view="smart-roas">
+            <div class="kc-title">Smart ROAS bidding</div>
+            <div class="kc-desc">Set a ROAS target and a budget; the system sets your bids to work toward it.</div>
+            <div class="kc-meta">Concept</div>
+          </a>
+          <a class="kc-card" data-view="max-performance-cpc">
+            <div class="kc-title">Max Performance CPC</div>
+            <div class="kc-desc">An upcoming Smart Shopping bidding option — set only a budget and let the system handle the bids.</div>
+            <div class="kc-meta soon">Coming soon</div>
+          </a>
           <a class="kc-card" data-view="search">
             <div class="kc-title">Create a Search campaign</div>
             <div class="kc-desc">Set up, configure, and launch a keyword-targeted Search campaign end to end.</div>
@@ -464,6 +570,318 @@
         <p class="footer-note">
           Need a hand? Reply to any Purplle Ads email or reach out to your account manager.
         </p>
+      </section>
+
+      <!-- ---------- BASICS: WHAT IS PURPLLE ADS ---------- -->
+      <section class="view" id="view-what-is-purplle-ads">
+        <div class="eyebrow">Basics</div>
+        <h1 class="page-title">What is Purplle Ads</h1>
+        <p class="lede">
+          Purplle Ads Platform is where brands run and manage advertising on Purplle — create campaigns,
+          fund them from your wallet, and track performance, all in one place. Here's a quick look at the
+          ad types you can run.
+        </p>
+
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Search ads</p>
+            <p class="def-body">Keyword-targeted ads shown when shoppers search for matching terms. You choose the keywords, the products to advertise, your budget, and your bids.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Smart Shopping</p>
+            <p class="def-body">Automated campaigns that promote your products across performance inventory. You set the budget and category bids; placement is handled for you.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Product Display Ads (PDA)</p>
+            <p class="def-body">Display ads that promote products using category targeting and product sets.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Visibility campaigns <span class="pill">After migration</span></p>
+            <p class="def-body">Awareness-focused placements for reach and visibility across the platform. Rolling out after migration.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Search and Smart Shopping run on separate inventories.</b> Set up and track each ad type on its own.
+        </div>
+      </section>
+
+      <!-- ---------- BASICS: PERFORMANCE METRICS ---------- -->
+      <section class="view" id="view-performance-metrics">
+        <div class="eyebrow">Basics</div>
+        <h1 class="page-title">Performance metrics</h1>
+        <p class="lede">
+          Definitions for the metrics you'll see across your campaign reports and dashboards.
+        </p>
+
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Spend</p>
+            <p class="def-body">The total you're charged for clicks across your campaigns. Performance ads are billed per click, so you're charged each time a shopper clicks your ad.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Ad impressions</p>
+            <p class="def-body">The number of times your ad was shown to shoppers.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Ad clicks</p>
+            <p class="def-body">The number of times shoppers clicked your ad.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Click-through rate (CTR)</p>
+            <p class="def-body">The share of impressions that led to a click — clicks divided by impressions, shown as a percentage.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Cost per click (CPC)</p>
+            <p class="def-body">The average amount you pay per click — spend divided by clicks.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Orders</p>
+            <p class="def-body">The number of orders shoppers placed after interacting with your ads.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Ad revenue (attributed GMV)</p>
+            <p class="def-body">The value of sales credited to your campaign when a shopper clicks your ad and then makes a purchase.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">ROAS / ROI</p>
+            <p class="def-body">Return on ad spend — attributed revenue divided by spend. A higher number means more revenue for every rupee spent.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Attribution</p>
+            <p class="def-body">Purplle Ads uses 7-day click-through attribution: a sale is credited to your campaign when a shopper clicks your ad and then makes a purchase within 7 days of that click.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Outcomes use 7-day click-through attribution.</b> Metrics like attributed GMV and ROAS credit a sale only when a shopper clicked your ad and then purchased within 7 days.
+        </div>
+      </section>
+
+      <!-- ---------- BASICS: WALLET & BILLING TERMS ---------- -->
+      <section class="view" id="view-wallet-terms">
+        <div class="eyebrow">Basics</div>
+        <h1 class="page-title">Wallet &amp; billing terms</h1>
+        <p class="lede">
+          The vocabulary behind funding your campaigns — wallets, how you add funds, and the credit methods available.
+        </p>
+
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Primary wallet</p>
+            <p class="def-body">Your main wallet. Funds you add land here, and you distribute from it to other wallets.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Sub-wallet</p>
+            <p class="def-body">A dedicated wallet you create under Primary to ring-fence budget — for example, by brand, team, or campaign type.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Performance &amp; Display wallets</p>
+            <p class="def-body">Wallets that fund your performance and display campaigns. You move funds into them from Primary.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Credit request</p>
+            <p class="def-body">A request to add new funds to your wallet through a payment method — PayU, bank transfer, Purchase Order, Recharge Order, or Marketing Visibility.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Transfer</p>
+            <p class="def-body">Moving funds between your own wallets — for example, Primary to a sub-wallet. Transfers are instant.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">PayU <span class="pill">Auto-confirm ≤ ₹4.5L</span></p>
+            <p class="def-body">The payment gateway for wallet top-ups. Requests up to ₹4,50,000 are confirmed automatically.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Post-paid (PO / RO)</p>
+            <p class="def-body">Credit against a Purchase Order or Recharge Order. You submit the PO/RO number, issue date, and document; the request is reviewed before the credit is applied.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Marketing Visibility (PI)</p>
+            <p class="def-body">A credit method that requires a Proforma Invoice (PI) from your account manager, along with a contract reference.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Reviewed vs instant credit</p>
+            <p class="def-body">PayU credits auto-confirm. Bank transfer, PO, RO, and Marketing Visibility are reviewed before the credit is applied. Transfers between your own wallets are instant.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Promo credit</p>
+            <p class="def-body">A promotional credit balance with its own usage rules — for example, funds granted under a marketing or visibility program. It sits in your wallet but may be governed by specific conditions.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Transaction history</p>
+            <p class="def-body">The record of your wallet activity — credits, debits, and transfers — that you can view and export for your account.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Refunds &amp; reversals</p>
+            <p class="def-body">If a charge is reversed or funds are returned to your wallet, it appears as a reversal or refund entry in your transaction history.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- CONCEPT: HOW KEYWORD MATCHING WORKS ---------- -->
+      <section class="view" id="view-keyword-matching">
+        <div class="eyebrow">Concepts</div>
+        <h1 class="page-title">How keyword matching works</h1>
+        <p class="lede">
+          On Search campaigns, keywords decide which shopper searches your ad can show for. You control
+          this with match types for the keywords you want, and negative keywords for the searches you don't.
+        </p>
+
+        <div class="guide-section">Match types</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Exact match</p>
+            <p class="def-body">Your ad is eligible only when a shopper's search matches your keyword exactly. Tightest control, narrowest reach. Use it for the terms you're most sure about.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Phrase match</p>
+            <p class="def-body">Your ad is eligible when your keyword overlaps with the shopper's search — for example, when your keyword appears within a longer search. Wider reach than exact, while staying relevant. Pair it with negative keywords to keep out searches you don't want.</p>
+          </div>
+        </div>
+
+        <div class="guide-section">Negative keywords</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">What they do</p>
+            <p class="def-body">Negative keywords block your ad from showing on specific searches — useful for filtering out irrelevant, off-brand, or low-intent traffic so you don't pay for clicks that won't convert. They're set at the campaign level and are applied before your keywords are matched.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Negative exact vs negative phrase</p>
+            <p class="def-body">A negative exact keyword blocks only the exact search you specify. A negative phrase keyword blocks searches that contain that phrase. Start narrow to avoid accidentally blocking useful traffic.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          Your bid and how relevant your ad is both influence when your ad shows and where it appears. Focus your keywords, set clear bids, and use negatives to keep traffic relevant.
+        </div>
+      </section>
+
+      <!-- ---------- CONCEPT: DISPLAY AD FORMATS ---------- -->
+      <section class="view" id="view-display-formats">
+        <div class="eyebrow">Concepts</div>
+        <h1 class="page-title">Display ad formats</h1>
+        <p class="lede">
+          Alongside Search and Smart Shopping, Purplle Ads offers display formats for reach and visibility.
+          These run separately from your performance campaigns and are rolling out after migration.
+        </p>
+
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Visibility <span class="pill">Rolling out</span></p>
+            <p class="def-body">Awareness-focused placements bought on an impression basis, with targeting. Good for building reach and visibility. Delivery is shared fairly across advertisers so no single brand dominates. Pricing is set through the platform.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Takeovers <span class="pill">Rolling out</span></p>
+            <p class="def-body">Premium placements you reserve for a set period — for example, a high-visibility spot for a full day. Booked in advance for moments when you want maximum presence.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Bundles <span class="pill">Rolling out</span></p>
+            <p class="def-body">Access packages, sold as fixed tiers (Silver, Gold, Platinum), that let you serve across a defined set of placements. Simple by design — no bidding — with impressions rotated fairly across participating brands.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          Display formats are for reach and visibility, and work differently from Search and Smart Shopping. Guides will be added here as each format goes live.
+        </div>
+      </section>
+
+      <!-- ---------- CONCEPT: SMART ROAS BIDDING ---------- -->
+      <section class="view" id="view-smart-roas">
+        <div class="eyebrow">Concepts</div>
+        <h1 class="page-title">Smart ROAS bidding</h1>
+        <p class="lede">
+          Smart ROAS is an automated bidding option for Smart Shopping campaigns. You set a daily budget
+          and a ROAS target, and the system sets your bids to work toward that target — so you manage the
+          outcome you want instead of individual bids.
+        </p>
+
+        <div class="guide-section">What you set</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Budget and a ROAS target</p>
+            <p class="def-body">You choose a daily budget and a ROAS target — for example, 2×, meaning ₹2 of attributed revenue for every ₹1 spent. Products and targeting are the same as any Smart Shopping campaign.</p>
+          </div>
+        </div>
+
+        <div class="guide-section">What the system does</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Sets your bids for you</p>
+            <p class="def-body">The system decides how much to bid across placements to work toward your ROAS target. You don't set per-click bids.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">ROAS in, ROAS out</p>
+            <p class="def-body">The target you set is what the system aims to deliver. That makes your spend predictable against the margin you're comfortable with — you tell it the return you want, and it bids to match.</p>
+          </div>
+        </div>
+
+        <div class="guide-section">Controlling scale</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Lower target = more volume</p>
+            <p class="def-body">A lower ROAS target bids more aggressively and wins more, so you spend faster and reach more shoppers. A higher target bids more conservatively — more efficient, but less volume and slower spend. Adjust the target to dial scale up or down.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Picking a sensible target</p>
+            <p class="def-body">Very low targets lead to very aggressive spend; very high targets can limit how much your campaign spends. Start near the return you actually need and adjust based on results.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Applies to Smart Shopping campaigns.</b> Search campaigns aren't included. A newer option, <b>Max Performance CPC</b>, is coming — it needs only a budget (no target) and will become the primary way to automate bidding.
+        </div>
+      </section>
+
+      <!-- ---------- CONCEPT: MAX PERFORMANCE CPC (COMING SOON) ---------- -->
+      <section class="view" id="view-max-performance-cpc">
+        <div class="eyebrow">Concepts</div>
+        <h1 class="page-title">Max Performance CPC <span class="pill">Coming soon</span></h1>
+        <p class="lede">
+          Max Performance CPC is an upcoming bidding option for Smart Shopping campaigns. You set a daily
+          budget — no bid, no ROAS target — and the system decides where to show your products and how much
+          to bid on each page. It's the next step on from Smart ROAS and will become the primary way to
+          automate bidding. It's not live yet; this is a preview of how it will work.
+        </p>
+
+        <div class="guide-section">What you set</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Just your budget</p>
+            <p class="def-body">You choose a daily budget, your products, and your targeting — the same product selector and categories as Smart Shopping today. There's no bid field and no ROAS field to manage.</p>
+          </div>
+        </div>
+
+        <div class="guide-section">What the system does</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Bids per page for you</p>
+            <p class="def-body">Instead of one flat bid everywhere, the system works out a tailored bid for each page, leaning toward the pages where a product tends to perform better. It uses your recent campaign performance to do this.</p>
+          </div>
+          <div class="def">
+            <p class="def-term">Keeps you competitive</p>
+            <p class="def-body">Your campaign stays in the running on every eligible page rather than sitting out, and aims to spend your daily budget across the pages most likely to perform.</p>
+          </div>
+        </div>
+
+        <div class="guide-section">How it differs from manual bidding</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">Manual vs Max Performance</p>
+            <p class="def-body">With manual bidding you set one bid and it applies to every page. With Max Performance CPC, the bid is tailored per page automatically, so your budget flows to where your products perform best — without you managing individual bids. Manual bidding stays available; this is an additional option.</p>
+          </div>
+        </div>
+
+        <div class="guide-section">Reporting</div>
+        <div class="def-list">
+          <div class="def">
+            <p class="def-term">What you'll see</p>
+            <p class="def-body">Impressions, clicks, spend, CTR, and budget utilisation per page in real time. Revenue and ROAS follow on the standard 7-day attribution window and are shown as outcomes, not targets the system commits to.</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>Applies to Smart Shopping campaigns.</b> Search campaigns aren't included. When you switch a campaign to Max Performance CPC, it takes a short while to settle as the system adapts to the new bidding pattern.
+        </div>
       </section>
 
       <!-- ---------- SEARCH CAMPAIGN GUIDE ---------- -->
@@ -2363,6 +2781,85 @@
     sidebar.classList.toggle('open'); backdrop.classList.toggle('show');
   });
   backdrop.addEventListener('click', closeMenu);
+
+  /* ---------- Client-side search ---------- */
+  var searchInput = document.getElementById('searchInput');
+  var searchResults = document.getElementById('searchResults');
+  var navWrap = document.getElementById('navWrap');
+
+  // Build an index from every view section (auto-covers future pages)
+  var index = Array.prototype.map.call(views, function(v){
+    var titleEl = v.querySelector('.page-title');
+    var eyeEl = v.querySelector('.eyebrow');
+    return {
+      id: v.id.replace('view-',''),
+      title: titleEl ? titleEl.textContent.trim() : v.id,
+      eyebrow: eyeEl ? eyeEl.textContent.trim() : '',
+      text: (v.textContent || '').replace(/\s+/g,' ').trim()
+    };
+  }).filter(function(x){ return x.id !== 'home'; });
+
+  function escapeHtml(s){ return s.replace(/[&<>]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]; }); }
+
+  function snippet(text, q){
+    var i = text.toLowerCase().indexOf(q);
+    if(i < 0) return '';
+    var start = Math.max(0, i - 30);
+    var end = Math.min(text.length, i + q.length + 40);
+    var pre = (start > 0 ? '…' : '') + text.slice(start, i);
+    var hit = text.slice(i, i + q.length);
+    var post = text.slice(i + q.length, end) + (end < text.length ? '…' : '');
+    return escapeHtml(pre) + '<b>' + escapeHtml(hit) + '</b>' + escapeHtml(post);
+  }
+
+  function runSearch(){
+    var q = searchInput.value.trim().toLowerCase();
+    if(!q){
+      searchResults.classList.remove('show');
+      searchResults.innerHTML = '';
+      navWrap.classList.remove('hidden');
+      return;
+    }
+    navWrap.classList.add('hidden');
+    searchResults.classList.add('show');
+
+    var hits = index.map(function(item){
+      var t = item.title.toLowerCase();
+      var score = -1;
+      if(t.indexOf(q) === 0) score = 0;          // title starts with query
+      else if(t.indexOf(q) >= 0) score = 1;      // title contains query
+      else if(item.text.toLowerCase().indexOf(q) >= 0) score = 2; // body contains
+      return { item: item, score: score };
+    }).filter(function(h){ return h.score >= 0; })
+      .sort(function(a,b){ return a.score - b.score; });
+
+    if(!hits.length){
+      searchResults.innerHTML = '<div class="sr-empty">No results for "' + escapeHtml(searchInput.value.trim()) + '".</div>';
+      return;
+    }
+
+    searchResults.innerHTML = hits.slice(0, 12).map(function(h){
+      var snip = snippet(h.item.text, q);
+      return '<a class="search-result" data-goto="' + h.item.id + '">' +
+        (h.item.eyebrow ? '<div class="sr-eyebrow">' + escapeHtml(h.item.eyebrow) + '</div>' : '') +
+        '<div class="sr-title">' + escapeHtml(h.item.title) + '</div>' +
+        (snip ? '<div class="sr-snippet">' + snip + '</div>' : '') +
+        '</a>';
+    }).join('');
+  }
+
+  searchInput.addEventListener('input', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ searchInput.value = ''; runSearch(); searchInput.blur(); }
+  });
+  searchResults.addEventListener('click', function(e){
+    var el = e.target.closest('[data-goto]');
+    if(!el) return;
+    e.preventDefault();
+    go(el.getAttribute('data-goto'));
+    searchInput.value = '';
+    runSearch();
+  });
 
   // initial route
   show((location.hash.replace('#/','')) || 'home');
